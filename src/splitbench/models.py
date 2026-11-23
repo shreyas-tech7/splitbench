@@ -179,6 +179,9 @@ class ChatModel:
         timeout: float = 60.0,
         max_retries: int = 5,
     ):
+        local = base_url.startswith(("http://127.0.0.1", "http://localhost"))
+        if not (base_url.startswith("https://") or local):
+            raise ValueError("base_url must be https, or http on localhost for tests")
         self.name, self.base_url, self.mode = model, base_url.rstrip("/"), mode
         self.cache_dir, self.key_env, self.timeout, self.max_retries = (
             Path(cache_dir),
@@ -217,7 +220,8 @@ class ChatModel:
             headers["Authorization"] = f"Bearer {key}"
         wait = 2.0
         for attempt in range(self.max_retries):
-            req = urllib.request.Request(f"{self.base_url}/chat/completions", data=body, headers=headers)
+            url = f"{self.base_url}/chat/completions"  # scheme checked in __init__
+            req = urllib.request.Request(url, data=body, headers=headers)  # noqa: S310
             try:
                 with urllib.request.urlopen(req, timeout=self.timeout) as r:  # noqa: S310 (fixed https base url)
                     return json.loads(r.read().decode())

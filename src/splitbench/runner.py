@@ -84,7 +84,8 @@ def run_one(task, arch, model, corpus, level, parallel="lockstep"):
         "mast": metrics.mast_tag(run, task, ok, hand),
         "seconds": round(run.seconds, 3),
     }
-    assert budget.used_tokens <= max_tokens and budget.tool_calls <= max_calls
+    if budget.used_tokens > max_tokens or budget.tool_calls > max_calls:
+        raise RuntimeError(f"budget broken: {budget.used_tokens} tokens, {budget.tool_calls} tool calls")
     return rec, transcript(run)
 
 
