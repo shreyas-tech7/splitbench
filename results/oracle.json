@@ -1,0 +1,366 @@
+{
+ "correct": 60,
+ "n": 60,
+ "runs": [
+  {
+   "answer": "11899",
+   "correct": true,
+   "task": "T01",
+   "tool_calls": 13
+  },
+  {
+   "answer": "12842",
+   "correct": true,
+   "task": "T02",
+   "tool_calls": 14
+  },
+  {
+   "answer": "Esk Holdings",
+   "correct": true,
+   "task": "T03",
+   "tool_calls": 12
+  },
+  {
+   "answer": "Ister Works",
+   "correct": true,
+   "task": "T04",
+   "tool_calls": 11
+  },
+  {
+   "answer": "Elvan Systems",
+   "correct": true,
+   "task": "T05",
+   "tool_calls": 11
+  },
+  {
+   "answer": "10233",
+   "correct": true,
+   "task": "T06",
+   "tool_calls": 13
+  },
+  {
+   "answer": "Lumen Works, Ondra Group, Esk Holdings",
+   "correct": true,
+   "task": "T07",
+   "tool_calls": 22
+  },
+  {
+   "answer": "Siva Group, Tyrel Holdings, Zorin Partners",
+   "correct": true,
+   "task": "T08",
+   "tool_calls": 20
+  },
+  {
+   "answer": "6",
+   "correct": true,
+   "task": "T09",
+   "tool_calls": 22
+  },
+  {
+   "answer": "Fable Dynamics, Cato Group, Ulmo Partners",
+   "correct": true,
+   "task": "T10",
+   "tool_calls": 22
+  },
+  {
+   "answer": "Ivo Holdings",
+   "correct": true,
+   "task": "T11",
+   "tool_calls": 11
+  },
+  {
+   "answer": "Jarvo Systems",
+   "correct": true,
+   "task": "T12",
+   "tool_calls": 12
+  },
+  {
+   "answer": "Yalo Labs",
+   "correct": true,
+   "task": "T13",
+   "tool_calls": 12
+  },
+  {
+   "answer": "6",
+   "correct": true,
+   "task": "T14",
+   "tool_calls": 20
+  },
+  {
+   "answer": "10709",
+   "correct": true,
+   "task": "T15",
+   "tool_calls": 14
+  },
+  {
+   "answer": "Kael Systems",
+   "correct": true,
+   "task": "T16",
+   "tool_calls": 11
+  },
+  {
+   "answer": "6",
+   "correct": true,
+   "task": "T17",
+   "tool_calls": 22
+  },
+  {
+   "answer": "4",
+   "correct": true,
+   "task": "T18",
+   "tool_calls": 22
+  },
+  {
+   "answer": "Halden Industries, Elvan Systems, Taron Labs",
+   "correct": true,
+   "task": "T19",
+   "tool_calls": 20
+  },
+  {
+   "answer": "Ulmo Partners",
+   "correct": true,
+   "task": "T20",
+   "tool_calls": 12
+  },
+  {
+   "answer": "Gus Nash",
+   "correct": true,
+   "task": "T21",
+   "tool_calls": 6
+  },
+  {
+   "answer": "1999",
+   "correct": true,
+   "task": "T22",
+   "tool_calls": 9
+  },
+  {
+   "answer": "1786",
+   "correct": true,
+   "task": "T23",
+   "tool_calls": 8
+  },
+  {
+   "answer": "Westmere",
+   "correct": true,
+   "task": "T24",
+   "tool_calls": 8
+  },
+  {
+   "answer": "2001",
+   "correct": true,
+   "task": "T25",
+   "tool_calls": 10
+  },
+  {
+   "answer": "Ivan Okafor",
+   "correct": true,
+   "task": "T26",
+   "tool_calls": 6
+  },
+  {
+   "answer": "Maraview",
+   "correct": true,
+   "task": "T27",
+   "tool_calls": 8
+  },
+  {
+   "answer": "1447",
+   "correct": true,
+   "task": "T28",
+   "tool_calls": 8
+  },
+  {
+   "answer": "Corrow Bay",
+   "correct": true,
+   "task": "T29",
+   "tool_calls": 8
+  },
+  {
+   "answer": "351",
+   "correct": true,
+   "task": "T30",
+   "tool_calls": 8
+  },
+  {
+   "answer": "Corrow Bay",
+   "correct": true,
+   "task": "T31",
+   "tool_calls": 7
+  },
+  {
+   "answer": "229",
+   "correct": true,
+   "task": "T32",
+   "tool_calls": 8
+  },
+  {
+   "answer": "2001",
+   "correct": true,
+   "task": "T33",
+   "tool_calls": 10
+  },
+  {
+   "answer": "2001",
+   "correct": true,
+   "task": "T34",
+   "tool_calls": 10
+  },
+  {
+   "answer": "Kai Kato",
+   "correct": true,
+   "task": "T35",
+   "tool_calls": 5
+  },
+  {
+   "answer": "Ivan Okafor",
+   "correct": true,
+   "task": "T36",
+   "tool_calls": 6
+  },
+  {
+   "answer": "1990",
+   "correct": true,
+   "task": "T37",
+   "tool_calls": 10
+  },
+  {
+   "answer": "Maraview",
+   "correct": true,
+   "task": "T38",
+   "tool_calls": 7
+  },
+  {
+   "answer": "Kai Kato",
+   "correct": true,
+   "task": "T39",
+   "tool_calls": 6
+  },
+  {
+   "answer": "1527",
+   "correct": true,
+   "task": "T40",
+   "tool_calls": 8
+  },
+  {
+   "answer": "3",
+   "correct": true,
+   "task": "T41",
+   "tool_calls": 27
+  },
+  {
+   "answer": "2703",
+   "correct": true,
+   "task": "T42",
+   "tool_calls": 27
+  },
+  {
+   "answer": "2484",
+   "correct": true,
+   "task": "T43",
+   "tool_calls": 27
+  },
+  {
+   "answer": "4700",
+   "correct": true,
+   "task": "T44",
+   "tool_calls": 27
+  },
+  {
+   "answer": "Nexo Group",
+   "correct": true,
+   "task": "T45",
+   "tool_calls": 25
+  },
+  {
+   "answer": "Quorr Partners",
+   "correct": true,
+   "task": "T46",
+   "tool_calls": 25
+  },
+  {
+   "answer": "1438",
+   "correct": true,
+   "task": "T47",
+   "tool_calls": 23
+  },
+  {
+   "answer": "373",
+   "correct": true,
+   "task": "T48",
+   "tool_calls": 27
+  },
+  {
+   "answer": "2",
+   "correct": true,
+   "task": "T49",
+   "tool_calls": 27
+  },
+  {
+   "answer": "Harlo Works",
+   "correct": true,
+   "task": "T50",
+   "tool_calls": 26
+  },
+  {
+   "answer": "3681",
+   "correct": true,
+   "task": "T51",
+   "tool_calls": 27
+  },
+  {
+   "answer": "4",
+   "correct": true,
+   "task": "T52",
+   "tool_calls": 27
+  },
+  {
+   "answer": "2",
+   "correct": true,
+   "task": "T53",
+   "tool_calls": 27
+  },
+  {
+   "answer": "4",
+   "correct": true,
+   "task": "T54",
+   "tool_calls": 27
+  },
+  {
+   "answer": "Harlo Works",
+   "correct": true,
+   "task": "T55",
+   "tool_calls": 25
+  },
+  {
+   "answer": "Nolan Industries",
+   "correct": true,
+   "task": "T56",
+   "tool_calls": 24
+  },
+  {
+   "answer": "Ondra Group",
+   "correct": true,
+   "task": "T57",
+   "tool_calls": 20
+  },
+  {
+   "answer": "5",
+   "correct": true,
+   "task": "T58",
+   "tool_calls": 23
+  },
+  {
+   "answer": "1064",
+   "correct": true,
+   "task": "T59",
+   "tool_calls": 23
+  },
+  {
+   "answer": "7",
+   "correct": true,
+   "task": "T60",
+   "tool_calls": 27
+  }
+ ]
+}

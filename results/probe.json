@@ -1,0 +1,19 @@
+{
+ "date": "2026-11-23",
+ "cpu": "Intel(R) Xeon(R) Processor @ 2.30GHz",
+ "python": "3.11.18",
+ "probes": [
+  {
+   "provider": "groq",
+   "url": "https://api.groq.com/openai/v1/models",
+   "result": "curl: (56) CONNECT tunnel failed, response 403",
+   "key_set": false
+  },
+  {
+   "provider": "openrouter",
+   "url": "https://openrouter.ai/api/v1/models",
+   "result": "curl: (56) CONNECT tunnel failed, response 403",
+   "key_set": false
+  }
+ ]
+}
