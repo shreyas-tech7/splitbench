@@ -1,0 +1,165 @@
+[
+ {
+  "id": "F01",
+  "area": "corpus",
+  "description": "Seeded generator writes 301 documents about 58 invented companies with a structured answer key; every key fact parses back from the text",
+  "steps": [
+   "./init.sh",
+   "./.venv/bin/python -m pytest tests/test_corpus.py"
+  ],
+  "passes": false
+ },
+ {
+  "id": "F02",
+  "area": "tasks",
+  "description": "60 tasks (20 breadth, 20 depth, 20 mixed) with exact answers, frozen with a digest; 20 dev and 40 held out",
+  "steps": [
+   "./.venv/bin/splitbench check-frozen",
+   "./.venv/bin/python -m pytest tests/test_tasks.py"
+  ],
+  "passes": false
+ },
+ {
+  "id": "F03",
+  "area": "oracle",
+  "description": "Oracle solver uses only search and read_doc and gets all 60 answers right",
+  "steps": [
+   "./.venv/bin/splitbench oracle",
+   "./.venv/bin/python -m pytest tests/test_oracle.py"
+  ],
+  "passes": false
+ },
+ {
+  "id": "F04",
+  "area": "tools",
+  "description": "search (BM25 over title and text) and read_doc tools",
+  "steps": [
+   "./.venv/bin/python -m pytest tests/test_tools.py"
+  ],
+  "passes": false
+ },
+ {
+  "id": "F05",
+  "area": "model",
+  "description": "Scripted model follows each role's protocol offline and reads only its own messages",
+  "steps": [
+   "./.venv/bin/python -m pytest tests/test_scripted.py"
+  ],
+  "passes": false
+ },
+ {
+  "id": "F06",
+  "area": "budget",
+  "description": "Budget enforcer: no architecture can pass the token cap or the tool-call cap, proven with a fake model that reports known token counts",
+  "steps": [
+   "./.venv/bin/python -m pytest tests/test_budget.py"
+  ],
+  "passes": false
+ },
+ {
+  "id": "F07",
+  "area": "architectures",
+  "description": "Single agent and orchestrator with workers; the orchestrator is a state machine (plan, dispatch, collect, combine, stop) with each transition tested",
+  "steps": [
+   "./.venv/bin/python -m pytest tests/test_agents.py"
+  ],
+  "passes": false
+ },
+ {
+  "id": "F08",
+  "area": "architectures",
+  "description": "Pipeline (planner, executor, checker) and single agent with a scratchpad",
+  "steps": [
+   "./.venv/bin/python -m pytest tests/test_agents.py"
+  ],
+  "passes": false
+ },
+ {
+  "id": "F09",
+  "area": "metrics",
+  "description": "Exact-match scoring, Wilson and paired bootstrap intervals, handoff loss for multi-agent runs, and MAST failure tags by rule",
+  "steps": [
+   "./.venv/bin/python -m pytest tests/test_metrics.py"
+  ],
+  "passes": false
+ },
+ {
+  "id": "F10",
+  "area": "record",
+  "description": "Record mode against an OpenAI-compatible free provider with a request-hash cache, byte-for-byte replay and a resumable runner",
+  "steps": [
+   "./.venv/bin/python -m pytest tests/test_record.py"
+  ],
+  "passes": false
+ },
+ {
+  "id": "F11",
+  "area": "record",
+  "description": "At least one record-mode run with one free model over all four architectures on the held-out tasks",
+  "steps": [
+   "./.venv/bin/splitbench probe",
+   "./.venv/bin/splitbench run --provider groq --mode record"
+  ],
+  "passes": false
+ },
+ {
+  "id": "F12",
+  "area": "study",
+  "description": "Held-out study with the scripted model at two budget levels; README shows success, tokens, time, paired differences with intervals and handoff loss",
+  "steps": [
+   "./.venv/bin/splitbench run",
+   "./.venv/bin/splitbench report",
+   "./.venv/bin/splitbench readme --check"
+  ],
+  "passes": false
+ },
+ {
+  "id": "F13",
+  "area": "safety",
+  "description": "Tests run offline; a conftest guard fails any non-local connection and is proven by a test; secret scan before commits",
+  "steps": [
+   "./.venv/bin/python -m pytest tests/test_network_guard.py",
+   "gitleaks git -v ."
+  ],
+  "passes": false
+ },
+ {
+  "id": "F14",
+  "area": "quality",
+  "description": "README quality bar: status, problem, mermaid, results with intervals, cost, run guide, limits, glossary, related work, how it was built; CI with badge; topics; social preview; static results page; demo transcript; link check",
+  "steps": [
+   "./.venv/bin/python -m pytest tests/test_repo.py",
+   "./.venv/bin/python scripts/check_links.py",
+   "actionlint"
+  ],
+  "passes": false
+ },
+ {
+  "id": "F15",
+  "area": "docs",
+  "description": "Study-later kit: WALKTHROUGH, INTERVIEW_QA with the four interview points, DECISIONS",
+  "steps": [
+   "./.venv/bin/python -m pytest tests/test_repo.py"
+  ],
+  "passes": false
+ },
+ {
+  "id": "F16",
+  "area": "release",
+  "description": "Release check: review, gitleaks on history, pip-audit, ruff S, actionlint, links, humanized docs, outside check by a fresh subagent",
+  "steps": [
+   "test -f docs/RELEASE_CHECK.md"
+  ],
+  "passes": false
+ },
+ {
+  "id": "F17",
+  "area": "handoff",
+  "description": "Release candidate entry with the full release SHA in CHANGELOG and HUMAN_STEPS, COWORK_PROMPT, GITHUB_ABOUT and topics",
+  "steps": [
+   "grep -q v0.1.0-rc1 CHANGELOG.md",
+   "test -f docs/handoff/COWORK_PROMPT.md"
+  ],
+  "passes": false
+ }
+]

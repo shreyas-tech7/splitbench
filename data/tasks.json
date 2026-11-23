@@ -1,0 +1,4256 @@
+[
+ {
+  "answer": "11899",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "city_members",
+    "Westmere"
+   ],
+   [
+    "revenue",
+    "Grove Industries",
+    2025
+   ],
+   [
+    "revenue",
+    "Harlo Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Kael Systems",
+    2025
+   ],
+   [
+    "revenue",
+    "Mira Industries",
+    2025
+   ],
+   [
+    "revenue",
+    "Mosk Partners",
+    2025
+   ],
+   [
+    "revenue",
+    "Ondra Group",
+    2025
+   ],
+   [
+    "revenue",
+    "Tyrel Holdings",
+    2025
+   ],
+   [
+    "revenue",
+    "Vexa Group",
+    2025
+   ],
+   [
+    "revenue",
+    "Yorick Dynamics",
+    2025
+   ],
+   [
+    "revenue",
+    "Zellen Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Zeph Partners",
+    2025
+   ]
+  ],
+  "id": "T01",
+  "kind": "city_total",
+  "params": {
+   "C": "Westmere"
+  },
+  "question": "What was the total fiscal 2025 revenue, in millions of dollars, of the companies headquartered in Westmere? Answer with a whole number.",
+  "split": "dev",
+  "type": "breadth"
+ },
+ {
+  "answer": "12842",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "city_members",
+    "Lindhaven"
+   ],
+   [
+    "revenue",
+    "Ashby Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Brenna Partners",
+    2025
+   ],
+   [
+    "revenue",
+    "Cato Group",
+    2025
+   ],
+   [
+    "revenue",
+    "Hollo Industries",
+    2025
+   ],
+   [
+    "revenue",
+    "Ivo Holdings",
+    2025
+   ],
+   [
+    "revenue",
+    "Jun Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Lumen Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Orbin Industries",
+    2025
+   ],
+   [
+    "revenue",
+    "Siva Group",
+    2025
+   ],
+   [
+    "revenue",
+    "Sorin Dynamics",
+    2025
+   ],
+   [
+    "revenue",
+    "Yalo Labs",
+    2025
+   ],
+   [
+    "revenue",
+    "Zorin Partners",
+    2025
+   ]
+  ],
+  "id": "T02",
+  "kind": "city_total",
+  "params": {
+   "C": "Lindhaven"
+  },
+  "question": "What was the total fiscal 2025 revenue, in millions of dollars, of the companies headquartered in Lindhaven? Answer with a whole number.",
+  "split": "dev",
+  "type": "breadth"
+ },
+ {
+  "answer": "Esk Holdings",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "sector_members",
+    "Logistics"
+   ],
+   [
+    "employees",
+    "Abri Labs"
+   ],
+   [
+    "employees",
+    "Corra Works"
+   ],
+   [
+    "employees",
+    "Dorne Industries"
+   ],
+   [
+    "employees",
+    "Esk Holdings"
+   ],
+   [
+    "employees",
+    "Jun Works"
+   ],
+   [
+    "employees",
+    "Lumen Works"
+   ],
+   [
+    "employees",
+    "Marro Works"
+   ],
+   [
+    "employees",
+    "Nexo Group"
+   ],
+   [
+    "employees",
+    "Ondra Group"
+   ],
+   [
+    "employees",
+    "Pryce Labs"
+   ]
+  ],
+  "id": "T03",
+  "kind": "most_employees",
+  "params": {
+   "S": "Logistics"
+  },
+  "question": "Which Logistics company has the most employees? Answer with the company name.",
+  "split": "dev",
+  "type": "breadth"
+ },
+ {
+  "answer": "Ister Works",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "sector_members",
+    "Robotics"
+   ],
+   [
+    "founded",
+    "Faro Partners"
+   ],
+   [
+    "founded",
+    "Ister Works"
+   ],
+   [
+    "founded",
+    "Ivo Holdings"
+   ],
+   [
+    "founded",
+    "Quinto Industries"
+   ],
+   [
+    "founded",
+    "Siva Group"
+   ],
+   [
+    "founded",
+    "Tyrel Holdings"
+   ],
+   [
+    "founded",
+    "Xandor Dynamics"
+   ],
+   [
+    "founded",
+    "Zellen Works"
+   ],
+   [
+    "founded",
+    "Zorin Partners"
+   ]
+  ],
+  "id": "T04",
+  "kind": "earliest_founded",
+  "params": {
+   "S": "Robotics"
+  },
+  "question": "Which Robotics company was founded earliest? Answer with the company name.",
+  "split": "dev",
+  "type": "breadth"
+ },
+ {
+  "answer": "Elvan Systems",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "sector_members",
+    "Retail"
+   ],
+   [
+    "employees",
+    "Elvan Systems"
+   ],
+   [
+    "employees",
+    "Gisel Works"
+   ],
+   [
+    "employees",
+    "Halden Industries"
+   ],
+   [
+    "employees",
+    "Kael Systems"
+   ],
+   [
+    "employees",
+    "Rhee Dynamics"
+   ],
+   [
+    "employees",
+    "Tamsin Works"
+   ],
+   [
+    "employees",
+    "Taron Labs"
+   ],
+   [
+    "employees",
+    "Vexa Group"
+   ],
+   [
+    "employees",
+    "Wexley Holdings"
+   ]
+  ],
+  "id": "T05",
+  "kind": "most_employees",
+  "params": {
+   "S": "Retail"
+  },
+  "question": "Which Retail company has the most employees? Answer with the company name.",
+  "split": "dev",
+  "type": "breadth"
+ },
+ {
+  "answer": "10233",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "city_members",
+    "Corrow Bay"
+   ],
+   [
+    "revenue",
+    "Brivo Systems",
+    2025
+   ],
+   [
+    "revenue",
+    "Calix Partners",
+    2025
+   ],
+   [
+    "revenue",
+    "Corra Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Elvan Systems",
+    2025
+   ],
+   [
+    "revenue",
+    "Jarvo Systems",
+    2025
+   ],
+   [
+    "revenue",
+    "Kiro Group",
+    2025
+   ],
+   [
+    "revenue",
+    "Lorne Partners",
+    2025
+   ],
+   [
+    "revenue",
+    "Marro Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Opal Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Pell Systems",
+    2025
+   ],
+   [
+    "revenue",
+    "Wexley Holdings",
+    2025
+   ]
+  ],
+  "id": "T06",
+  "kind": "city_total",
+  "params": {
+   "C": "Corrow Bay"
+  },
+  "question": "What was the total fiscal 2025 revenue, in millions of dollars, of the companies headquartered in Corrow Bay? Answer with a whole number.",
+  "split": "dev",
+  "type": "breadth"
+ },
+ {
+  "answer": "Lumen Works, Ondra Group, Esk Holdings",
+  "answer_kind": "list3",
+  "evidence": [
+   [
+    "sector_members",
+    "Logistics"
+   ],
+   [
+    "revenue",
+    "Abri Labs",
+    2024
+   ],
+   [
+    "revenue",
+    "Abri Labs",
+    2025
+   ],
+   [
+    "revenue",
+    "Corra Works",
+    2024
+   ],
+   [
+    "revenue",
+    "Corra Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Dorne Industries",
+    2024
+   ],
+   [
+    "revenue",
+    "Dorne Industries",
+    2025
+   ],
+   [
+    "revenue",
+    "Esk Holdings",
+    2024
+   ],
+   [
+    "revenue",
+    "Esk Holdings",
+    2025
+   ],
+   [
+    "revenue",
+    "Jun Works",
+    2024
+   ],
+   [
+    "revenue",
+    "Jun Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Lumen Works",
+    2024
+   ],
+   [
+    "revenue",
+    "Lumen Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Marro Works",
+    2024
+   ],
+   [
+    "revenue",
+    "Marro Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Nexo Group",
+    2024
+   ],
+   [
+    "revenue",
+    "Nexo Group",
+    2025
+   ],
+   [
+    "revenue",
+    "Ondra Group",
+    2024
+   ],
+   [
+    "revenue",
+    "Ondra Group",
+    2025
+   ],
+   [
+    "revenue",
+    "Pryce Labs",
+    2024
+   ],
+   [
+    "revenue",
+    "Pryce Labs",
+    2025
+   ]
+  ],
+  "id": "T07",
+  "kind": "top3_growth",
+  "params": {
+   "S": "Logistics"
+  },
+  "question": "Which three Logistics companies grew revenue the most from fiscal 2024 to fiscal 2025, by percentage? Answer with the three company names, highest growth first, separated by commas.",
+  "split": "dev",
+  "type": "breadth"
+ },
+ {
+  "answer": "Siva Group, Tyrel Holdings, Zorin Partners",
+  "answer_kind": "list3",
+  "evidence": [
+   [
+    "sector_members",
+    "Robotics"
+   ],
+   [
+    "revenue",
+    "Faro Partners",
+    2024
+   ],
+   [
+    "revenue",
+    "Faro Partners",
+    2025
+   ],
+   [
+    "revenue",
+    "Ister Works",
+    2024
+   ],
+   [
+    "revenue",
+    "Ister Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Ivo Holdings",
+    2024
+   ],
+   [
+    "revenue",
+    "Ivo Holdings",
+    2025
+   ],
+   [
+    "revenue",
+    "Quinto Industries",
+    2024
+   ],
+   [
+    "revenue",
+    "Quinto Industries",
+    2025
+   ],
+   [
+    "revenue",
+    "Siva Group",
+    2024
+   ],
+   [
+    "revenue",
+    "Siva Group",
+    2025
+   ],
+   [
+    "revenue",
+    "Tyrel Holdings",
+    2024
+   ],
+   [
+    "revenue",
+    "Tyrel Holdings",
+    2025
+   ],
+   [
+    "revenue",
+    "Xandor Dynamics",
+    2024
+   ],
+   [
+    "revenue",
+    "Xandor Dynamics",
+    2025
+   ],
+   [
+    "revenue",
+    "Zellen Works",
+    2024
+   ],
+   [
+    "revenue",
+    "Zellen Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Zorin Partners",
+    2024
+   ],
+   [
+    "revenue",
+    "Zorin Partners",
+    2025
+   ]
+  ],
+  "id": "T08",
+  "kind": "top3_growth",
+  "params": {
+   "S": "Robotics"
+  },
+  "question": "Which three Robotics companies grew revenue the most from fiscal 2024 to fiscal 2025, by percentage? Answer with the three company names, highest growth first, separated by commas.",
+  "split": "heldout",
+  "type": "breadth"
+ },
+ {
+  "answer": "6",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "sector_members",
+    "Logistics"
+   ],
+   [
+    "revenue",
+    "Abri Labs",
+    2024
+   ],
+   [
+    "revenue",
+    "Abri Labs",
+    2025
+   ],
+   [
+    "revenue",
+    "Corra Works",
+    2024
+   ],
+   [
+    "revenue",
+    "Corra Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Dorne Industries",
+    2024
+   ],
+   [
+    "revenue",
+    "Dorne Industries",
+    2025
+   ],
+   [
+    "revenue",
+    "Esk Holdings",
+    2024
+   ],
+   [
+    "revenue",
+    "Esk Holdings",
+    2025
+   ],
+   [
+    "revenue",
+    "Jun Works",
+    2024
+   ],
+   [
+    "revenue",
+    "Jun Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Lumen Works",
+    2024
+   ],
+   [
+    "revenue",
+    "Lumen Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Marro Works",
+    2024
+   ],
+   [
+    "revenue",
+    "Marro Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Nexo Group",
+    2024
+   ],
+   [
+    "revenue",
+    "Nexo Group",
+    2025
+   ],
+   [
+    "revenue",
+    "Ondra Group",
+    2024
+   ],
+   [
+    "revenue",
+    "Ondra Group",
+    2025
+   ],
+   [
+    "revenue",
+    "Pryce Labs",
+    2024
+   ],
+   [
+    "revenue",
+    "Pryce Labs",
+    2025
+   ]
+  ],
+  "id": "T09",
+  "kind": "count_growth",
+  "params": {
+   "S": "Logistics"
+  },
+  "question": "How many Logistics companies reported higher revenue in fiscal 2025 than in fiscal 2024? Answer with a whole number.",
+  "split": "heldout",
+  "type": "breadth"
+ },
+ {
+  "answer": "Fable Dynamics, Cato Group, Ulmo Partners",
+  "answer_kind": "list3",
+  "evidence": [
+   [
+    "sector_members",
+    "Biotech"
+   ],
+   [
+    "revenue",
+    "Cato Group",
+    2024
+   ],
+   [
+    "revenue",
+    "Cato Group",
+    2025
+   ],
+   [
+    "revenue",
+    "Fable Dynamics",
+    2024
+   ],
+   [
+    "revenue",
+    "Fable Dynamics",
+    2025
+   ],
+   [
+    "revenue",
+    "Grove Industries",
+    2024
+   ],
+   [
+    "revenue",
+    "Grove Industries",
+    2025
+   ],
+   [
+    "revenue",
+    "Hollo Industries",
+    2024
+   ],
+   [
+    "revenue",
+    "Hollo Industries",
+    2025
+   ],
+   [
+    "revenue",
+    "Mosk Partners",
+    2024
+   ],
+   [
+    "revenue",
+    "Mosk Partners",
+    2025
+   ],
+   [
+    "revenue",
+    "Quorr Partners",
+    2024
+   ],
+   [
+    "revenue",
+    "Quorr Partners",
+    2025
+   ],
+   [
+    "revenue",
+    "Rilo Dynamics",
+    2024
+   ],
+   [
+    "revenue",
+    "Rilo Dynamics",
+    2025
+   ],
+   [
+    "revenue",
+    "Ulmo Partners",
+    2024
+   ],
+   [
+    "revenue",
+    "Ulmo Partners",
+    2025
+   ],
+   [
+    "revenue",
+    "Varn Industries",
+    2024
+   ],
+   [
+    "revenue",
+    "Varn Industries",
+    2025
+   ],
+   [
+    "revenue",
+    "Yorick Dynamics",
+    2024
+   ],
+   [
+    "revenue",
+    "Yorick Dynamics",
+    2025
+   ]
+  ],
+  "id": "T10",
+  "kind": "top3_growth",
+  "params": {
+   "S": "Biotech"
+  },
+  "question": "Which three Biotech companies grew revenue the most from fiscal 2024 to fiscal 2025, by percentage? Answer with the three company names, highest growth first, separated by commas.",
+  "split": "heldout",
+  "type": "breadth"
+ },
+ {
+  "answer": "Ivo Holdings",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "sector_members",
+    "Robotics"
+   ],
+   [
+    "employees",
+    "Faro Partners"
+   ],
+   [
+    "employees",
+    "Ister Works"
+   ],
+   [
+    "employees",
+    "Ivo Holdings"
+   ],
+   [
+    "employees",
+    "Quinto Industries"
+   ],
+   [
+    "employees",
+    "Siva Group"
+   ],
+   [
+    "employees",
+    "Tyrel Holdings"
+   ],
+   [
+    "employees",
+    "Xandor Dynamics"
+   ],
+   [
+    "employees",
+    "Zellen Works"
+   ],
+   [
+    "employees",
+    "Zorin Partners"
+   ]
+  ],
+  "id": "T11",
+  "kind": "most_employees",
+  "params": {
+   "S": "Robotics"
+  },
+  "question": "Which Robotics company has the most employees? Answer with the company name.",
+  "split": "heldout",
+  "type": "breadth"
+ },
+ {
+  "answer": "Jarvo Systems",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "sector_members",
+    "Energy"
+   ],
+   [
+    "founded",
+    "Ashby Works"
+   ],
+   [
+    "founded",
+    "Brenna Partners"
+   ],
+   [
+    "founded",
+    "Brivo Systems"
+   ],
+   [
+    "founded",
+    "Jarvo Systems"
+   ],
+   [
+    "founded",
+    "Kest Systems"
+   ],
+   [
+    "founded",
+    "Lorne Partners"
+   ],
+   [
+    "founded",
+    "Nolan Industries"
+   ],
+   [
+    "founded",
+    "Opal Works"
+   ],
+   [
+    "founded",
+    "Verin Industries"
+   ],
+   [
+    "founded",
+    "Wyra Labs"
+   ]
+  ],
+  "id": "T12",
+  "kind": "earliest_founded",
+  "params": {
+   "S": "Energy"
+  },
+  "question": "Which Energy company was founded earliest? Answer with the company name.",
+  "split": "heldout",
+  "type": "breadth"
+ },
+ {
+  "answer": "Yalo Labs",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "sector_members",
+    "Fintech"
+   ],
+   [
+    "employees",
+    "Calix Partners"
+   ],
+   [
+    "employees",
+    "Harlo Works"
+   ],
+   [
+    "employees",
+    "Kiro Group"
+   ],
+   [
+    "employees",
+    "Mira Industries"
+   ],
+   [
+    "employees",
+    "Orbin Industries"
+   ],
+   [
+    "employees",
+    "Pell Systems"
+   ],
+   [
+    "employees",
+    "Sorin Dynamics"
+   ],
+   [
+    "employees",
+    "Talo Systems"
+   ],
+   [
+    "employees",
+    "Yalo Labs"
+   ],
+   [
+    "employees",
+    "Zeph Partners"
+   ]
+  ],
+  "id": "T13",
+  "kind": "most_employees",
+  "params": {
+   "S": "Fintech"
+  },
+  "question": "Which Fintech company has the most employees? Answer with the company name.",
+  "split": "heldout",
+  "type": "breadth"
+ },
+ {
+  "answer": "6",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "sector_members",
+    "Retail"
+   ],
+   [
+    "revenue",
+    "Elvan Systems",
+    2024
+   ],
+   [
+    "revenue",
+    "Elvan Systems",
+    2025
+   ],
+   [
+    "revenue",
+    "Gisel Works",
+    2024
+   ],
+   [
+    "revenue",
+    "Gisel Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Halden Industries",
+    2024
+   ],
+   [
+    "revenue",
+    "Halden Industries",
+    2025
+   ],
+   [
+    "revenue",
+    "Kael Systems",
+    2024
+   ],
+   [
+    "revenue",
+    "Kael Systems",
+    2025
+   ],
+   [
+    "revenue",
+    "Rhee Dynamics",
+    2024
+   ],
+   [
+    "revenue",
+    "Rhee Dynamics",
+    2025
+   ],
+   [
+    "revenue",
+    "Tamsin Works",
+    2024
+   ],
+   [
+    "revenue",
+    "Tamsin Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Taron Labs",
+    2024
+   ],
+   [
+    "revenue",
+    "Taron Labs",
+    2025
+   ],
+   [
+    "revenue",
+    "Vexa Group",
+    2024
+   ],
+   [
+    "revenue",
+    "Vexa Group",
+    2025
+   ],
+   [
+    "revenue",
+    "Wexley Holdings",
+    2024
+   ],
+   [
+    "revenue",
+    "Wexley Holdings",
+    2025
+   ]
+  ],
+  "id": "T14",
+  "kind": "count_growth",
+  "params": {
+   "S": "Retail"
+  },
+  "question": "How many Retail companies reported higher revenue in fiscal 2025 than in fiscal 2024? Answer with a whole number.",
+  "split": "heldout",
+  "type": "breadth"
+ },
+ {
+  "answer": "10709",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "city_members",
+    "Port Ellery"
+   ],
+   [
+    "revenue",
+    "Gisel Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Halden Industries",
+    2025
+   ],
+   [
+    "revenue",
+    "Ister Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Kest Systems",
+    2025
+   ],
+   [
+    "revenue",
+    "Nexo Group",
+    2025
+   ],
+   [
+    "revenue",
+    "Pryce Labs",
+    2025
+   ],
+   [
+    "revenue",
+    "Rhee Dynamics",
+    2025
+   ],
+   [
+    "revenue",
+    "Talo Systems",
+    2025
+   ],
+   [
+    "revenue",
+    "Tamsin Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Ulmo Partners",
+    2025
+   ],
+   [
+    "revenue",
+    "Varn Industries",
+    2025
+   ],
+   [
+    "revenue",
+    "Verin Industries",
+    2025
+   ]
+  ],
+  "id": "T15",
+  "kind": "city_total",
+  "params": {
+   "C": "Port Ellery"
+  },
+  "question": "What was the total fiscal 2025 revenue, in millions of dollars, of the companies headquartered in Port Ellery? Answer with a whole number.",
+  "split": "heldout",
+  "type": "breadth"
+ },
+ {
+  "answer": "Kael Systems",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "sector_members",
+    "Retail"
+   ],
+   [
+    "founded",
+    "Elvan Systems"
+   ],
+   [
+    "founded",
+    "Gisel Works"
+   ],
+   [
+    "founded",
+    "Halden Industries"
+   ],
+   [
+    "founded",
+    "Kael Systems"
+   ],
+   [
+    "founded",
+    "Rhee Dynamics"
+   ],
+   [
+    "founded",
+    "Tamsin Works"
+   ],
+   [
+    "founded",
+    "Taron Labs"
+   ],
+   [
+    "founded",
+    "Vexa Group"
+   ],
+   [
+    "founded",
+    "Wexley Holdings"
+   ]
+  ],
+  "id": "T16",
+  "kind": "earliest_founded",
+  "params": {
+   "S": "Retail"
+  },
+  "question": "Which Retail company was founded earliest? Answer with the company name.",
+  "split": "heldout",
+  "type": "breadth"
+ },
+ {
+  "answer": "6",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "sector_members",
+    "Energy"
+   ],
+   [
+    "revenue",
+    "Ashby Works",
+    2024
+   ],
+   [
+    "revenue",
+    "Ashby Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Brenna Partners",
+    2024
+   ],
+   [
+    "revenue",
+    "Brenna Partners",
+    2025
+   ],
+   [
+    "revenue",
+    "Brivo Systems",
+    2024
+   ],
+   [
+    "revenue",
+    "Brivo Systems",
+    2025
+   ],
+   [
+    "revenue",
+    "Jarvo Systems",
+    2024
+   ],
+   [
+    "revenue",
+    "Jarvo Systems",
+    2025
+   ],
+   [
+    "revenue",
+    "Kest Systems",
+    2024
+   ],
+   [
+    "revenue",
+    "Kest Systems",
+    2025
+   ],
+   [
+    "revenue",
+    "Lorne Partners",
+    2024
+   ],
+   [
+    "revenue",
+    "Lorne Partners",
+    2025
+   ],
+   [
+    "revenue",
+    "Nolan Industries",
+    2024
+   ],
+   [
+    "revenue",
+    "Nolan Industries",
+    2025
+   ],
+   [
+    "revenue",
+    "Opal Works",
+    2024
+   ],
+   [
+    "revenue",
+    "Opal Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Verin Industries",
+    2024
+   ],
+   [
+    "revenue",
+    "Verin Industries",
+    2025
+   ],
+   [
+    "revenue",
+    "Wyra Labs",
+    2024
+   ],
+   [
+    "revenue",
+    "Wyra Labs",
+    2025
+   ]
+  ],
+  "id": "T17",
+  "kind": "count_growth",
+  "params": {
+   "S": "Energy"
+  },
+  "question": "How many Energy companies reported higher revenue in fiscal 2025 than in fiscal 2024? Answer with a whole number.",
+  "split": "heldout",
+  "type": "breadth"
+ },
+ {
+  "answer": "4",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "sector_members",
+    "Biotech"
+   ],
+   [
+    "revenue",
+    "Cato Group",
+    2024
+   ],
+   [
+    "revenue",
+    "Cato Group",
+    2025
+   ],
+   [
+    "revenue",
+    "Fable Dynamics",
+    2024
+   ],
+   [
+    "revenue",
+    "Fable Dynamics",
+    2025
+   ],
+   [
+    "revenue",
+    "Grove Industries",
+    2024
+   ],
+   [
+    "revenue",
+    "Grove Industries",
+    2025
+   ],
+   [
+    "revenue",
+    "Hollo Industries",
+    2024
+   ],
+   [
+    "revenue",
+    "Hollo Industries",
+    2025
+   ],
+   [
+    "revenue",
+    "Mosk Partners",
+    2024
+   ],
+   [
+    "revenue",
+    "Mosk Partners",
+    2025
+   ],
+   [
+    "revenue",
+    "Quorr Partners",
+    2024
+   ],
+   [
+    "revenue",
+    "Quorr Partners",
+    2025
+   ],
+   [
+    "revenue",
+    "Rilo Dynamics",
+    2024
+   ],
+   [
+    "revenue",
+    "Rilo Dynamics",
+    2025
+   ],
+   [
+    "revenue",
+    "Ulmo Partners",
+    2024
+   ],
+   [
+    "revenue",
+    "Ulmo Partners",
+    2025
+   ],
+   [
+    "revenue",
+    "Varn Industries",
+    2024
+   ],
+   [
+    "revenue",
+    "Varn Industries",
+    2025
+   ],
+   [
+    "revenue",
+    "Yorick Dynamics",
+    2024
+   ],
+   [
+    "revenue",
+    "Yorick Dynamics",
+    2025
+   ]
+  ],
+  "id": "T18",
+  "kind": "count_growth",
+  "params": {
+   "S": "Biotech"
+  },
+  "question": "How many Biotech companies reported higher revenue in fiscal 2025 than in fiscal 2024? Answer with a whole number.",
+  "split": "heldout",
+  "type": "breadth"
+ },
+ {
+  "answer": "Halden Industries, Elvan Systems, Taron Labs",
+  "answer_kind": "list3",
+  "evidence": [
+   [
+    "sector_members",
+    "Retail"
+   ],
+   [
+    "revenue",
+    "Elvan Systems",
+    2024
+   ],
+   [
+    "revenue",
+    "Elvan Systems",
+    2025
+   ],
+   [
+    "revenue",
+    "Gisel Works",
+    2024
+   ],
+   [
+    "revenue",
+    "Gisel Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Halden Industries",
+    2024
+   ],
+   [
+    "revenue",
+    "Halden Industries",
+    2025
+   ],
+   [
+    "revenue",
+    "Kael Systems",
+    2024
+   ],
+   [
+    "revenue",
+    "Kael Systems",
+    2025
+   ],
+   [
+    "revenue",
+    "Rhee Dynamics",
+    2024
+   ],
+   [
+    "revenue",
+    "Rhee Dynamics",
+    2025
+   ],
+   [
+    "revenue",
+    "Tamsin Works",
+    2024
+   ],
+   [
+    "revenue",
+    "Tamsin Works",
+    2025
+   ],
+   [
+    "revenue",
+    "Taron Labs",
+    2024
+   ],
+   [
+    "revenue",
+    "Taron Labs",
+    2025
+   ],
+   [
+    "revenue",
+    "Vexa Group",
+    2024
+   ],
+   [
+    "revenue",
+    "Vexa Group",
+    2025
+   ],
+   [
+    "revenue",
+    "Wexley Holdings",
+    2024
+   ],
+   [
+    "revenue",
+    "Wexley Holdings",
+    2025
+   ]
+  ],
+  "id": "T19",
+  "kind": "top3_growth",
+  "params": {
+   "S": "Retail"
+  },
+  "question": "Which three Retail companies grew revenue the most from fiscal 2024 to fiscal 2025, by percentage? Answer with the three company names, highest growth first, separated by commas.",
+  "split": "heldout",
+  "type": "breadth"
+ },
+ {
+  "answer": "Ulmo Partners",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "sector_members",
+    "Biotech"
+   ],
+   [
+    "founded",
+    "Cato Group"
+   ],
+   [
+    "founded",
+    "Fable Dynamics"
+   ],
+   [
+    "founded",
+    "Grove Industries"
+   ],
+   [
+    "founded",
+    "Hollo Industries"
+   ],
+   [
+    "founded",
+    "Mosk Partners"
+   ],
+   [
+    "founded",
+    "Quorr Partners"
+   ],
+   [
+    "founded",
+    "Rilo Dynamics"
+   ],
+   [
+    "founded",
+    "Ulmo Partners"
+   ],
+   [
+    "founded",
+    "Varn Industries"
+   ],
+   [
+    "founded",
+    "Yorick Dynamics"
+   ]
+  ],
+  "id": "T20",
+  "kind": "earliest_founded",
+  "params": {
+   "S": "Biotech"
+  },
+  "question": "Which Biotech company was founded earliest? Answer with the company name.",
+  "split": "heldout",
+  "type": "breadth"
+ },
+ {
+  "answer": "Gus Nash",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "supplier",
+    "Varn Industries"
+   ],
+   [
+    "supplier",
+    "Nolan Industries"
+   ],
+   [
+    "ceo",
+    "Opal Works"
+   ]
+  ],
+  "id": "T21",
+  "kind": "ceo_ss",
+  "params": {
+   "A": "Varn Industries"
+  },
+  "question": "Who is the chief executive of the key supplier of the key supplier of Varn Industries? Answer with the person's name.",
+  "split": "dev",
+  "type": "depth"
+ },
+ {
+  "answer": "1999",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "supplier",
+    "Yorick Dynamics"
+   ],
+   [
+    "supplier",
+    "Brivo Systems"
+   ],
+   [
+    "former",
+    "Milo Arden"
+   ],
+   [
+    "ceo",
+    "Xandor Dynamics"
+   ],
+   [
+    "supplier",
+    "Xandor Dynamics"
+   ],
+   [
+    "founded",
+    "Quinto Industries"
+   ]
+  ],
+  "id": "T22",
+  "kind": "founded_chain5",
+  "params": {
+   "A": "Yorick Dynamics"
+  },
+  "question": "In which year was the key supplier of the company whose chief executive previously led the key supplier of the key supplier of Yorick Dynamics founded? Answer with the year.",
+  "split": "dev",
+  "type": "depth"
+ },
+ {
+  "answer": "1786",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "supplier",
+    "Harlo Works"
+   ],
+   [
+    "supplier",
+    "Mira Industries"
+   ],
+   [
+    "former",
+    "Ivan Marsh"
+   ],
+   [
+    "ceo",
+    "Nolan Industries"
+   ],
+   [
+    "revenue",
+    "Nolan Industries",
+    2025
+   ]
+  ],
+  "id": "T23",
+  "kind": "rev_former_ss",
+  "params": {
+   "A": "Harlo Works"
+  },
+  "question": "What was the fiscal 2025 revenue, in millions of dollars, of the company whose chief executive previously led the key supplier of the key supplier of Harlo Works? Answer with a whole number.",
+  "split": "dev",
+  "type": "depth"
+ },
+ {
+  "answer": "Westmere",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "supplier",
+    "Yalo Labs"
+   ],
+   [
+    "supplier",
+    "Quorr Partners"
+   ],
+   [
+    "supplier",
+    "Grove Industries"
+   ],
+   [
+    "city",
+    "Zeph Partners"
+   ]
+  ],
+  "id": "T24",
+  "kind": "city_sss",
+  "params": {
+   "A": "Yalo Labs"
+  },
+  "question": "In which city is the key supplier of the key supplier of the key supplier of Yalo Labs headquartered? Answer with the city name.",
+  "split": "dev",
+  "type": "depth"
+ },
+ {
+  "answer": "2001",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "supplier",
+    "Zellen Works"
+   ],
+   [
+    "supplier",
+    "Corra Works"
+   ],
+   [
+    "former",
+    "Hana Hale"
+   ],
+   [
+    "ceo",
+    "Halden Industries"
+   ],
+   [
+    "supplier",
+    "Halden Industries"
+   ],
+   [
+    "founded",
+    "Nolan Industries"
+   ]
+  ],
+  "id": "T25",
+  "kind": "founded_chain5",
+  "params": {
+   "A": "Zellen Works"
+  },
+  "question": "In which year was the key supplier of the company whose chief executive previously led the key supplier of the key supplier of Zellen Works founded? Answer with the year.",
+  "split": "dev",
+  "type": "depth"
+ },
+ {
+  "answer": "Ivan Okafor",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "supplier",
+    "Talo Systems"
+   ],
+   [
+    "supplier",
+    "Xandor Dynamics"
+   ],
+   [
+    "ceo",
+    "Quinto Industries"
+   ]
+  ],
+  "id": "T26",
+  "kind": "ceo_ss",
+  "params": {
+   "A": "Talo Systems"
+  },
+  "question": "Who is the chief executive of the key supplier of the key supplier of Talo Systems? Answer with the person's name.",
+  "split": "dev",
+  "type": "depth"
+ },
+ {
+  "answer": "Maraview",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "supplier",
+    "Lorne Partners"
+   ],
+   [
+    "supplier",
+    "Jun Works"
+   ],
+   [
+    "supplier",
+    "Halden Industries"
+   ],
+   [
+    "city",
+    "Nolan Industries"
+   ]
+  ],
+  "id": "T27",
+  "kind": "city_sss",
+  "params": {
+   "A": "Lorne Partners"
+  },
+  "question": "In which city is the key supplier of the key supplier of the key supplier of Lorne Partners headquartered? Answer with the city name.",
+  "split": "dev",
+  "type": "depth"
+ },
+ {
+  "answer": "1447",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "supplier",
+    "Fable Dynamics"
+   ],
+   [
+    "supplier",
+    "Talo Systems"
+   ],
+   [
+    "former",
+    "Jo Moss"
+   ],
+   [
+    "ceo",
+    "Ulmo Partners"
+   ],
+   [
+    "revenue",
+    "Ulmo Partners",
+    2025
+   ]
+  ],
+  "id": "T28",
+  "kind": "rev_former_ss",
+  "params": {
+   "A": "Fable Dynamics"
+  },
+  "question": "What was the fiscal 2025 revenue, in millions of dollars, of the company whose chief executive previously led the key supplier of the key supplier of Fable Dynamics? Answer with a whole number.",
+  "split": "heldout",
+  "type": "depth"
+ },
+ {
+  "answer": "Corrow Bay",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "supplier",
+    "Kiro Group"
+   ],
+   [
+    "supplier",
+    "Varn Industries"
+   ],
+   [
+    "supplier",
+    "Nolan Industries"
+   ],
+   [
+    "city",
+    "Opal Works"
+   ]
+  ],
+  "id": "T29",
+  "kind": "city_sss",
+  "params": {
+   "A": "Kiro Group"
+  },
+  "question": "In which city is the key supplier of the key supplier of the key supplier of Kiro Group headquartered? Answer with the city name.",
+  "split": "heldout",
+  "type": "depth"
+ },
+ {
+  "answer": "351",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "supplier",
+    "Zeph Partners"
+   ],
+   [
+    "supplier",
+    "Esk Holdings"
+   ],
+   [
+    "former",
+    "Hana Hale"
+   ],
+   [
+    "ceo",
+    "Halden Industries"
+   ],
+   [
+    "revenue",
+    "Halden Industries",
+    2025
+   ]
+  ],
+  "id": "T30",
+  "kind": "rev_former_ss",
+  "params": {
+   "A": "Zeph Partners"
+  },
+  "question": "What was the fiscal 2025 revenue, in millions of dollars, of the company whose chief executive previously led the key supplier of the key supplier of Zeph Partners? Answer with a whole number.",
+  "split": "heldout",
+  "type": "depth"
+ },
+ {
+  "answer": "Corrow Bay",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "supplier",
+    "Faro Partners"
+   ],
+   [
+    "supplier",
+    "Siva Group"
+   ],
+   [
+    "supplier",
+    "Nexo Group"
+   ],
+   [
+    "city",
+    "Kiro Group"
+   ]
+  ],
+  "id": "T31",
+  "kind": "city_sss",
+  "params": {
+   "A": "Faro Partners"
+  },
+  "question": "In which city is the key supplier of the key supplier of the key supplier of Faro Partners headquartered? Answer with the city name.",
+  "split": "heldout",
+  "type": "depth"
+ },
+ {
+  "answer": "229",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "supplier",
+    "Cato Group"
+   ],
+   [
+    "supplier",
+    "Vexa Group"
+   ],
+   [
+    "former",
+    "Ada Brandt"
+   ],
+   [
+    "ceo",
+    "Tyrel Holdings"
+   ],
+   [
+    "revenue",
+    "Tyrel Holdings",
+    2025
+   ]
+  ],
+  "id": "T32",
+  "kind": "rev_former_ss",
+  "params": {
+   "A": "Cato Group"
+  },
+  "question": "What was the fiscal 2025 revenue, in millions of dollars, of the company whose chief executive previously led the key supplier of the key supplier of Cato Group? Answer with a whole number.",
+  "split": "heldout",
+  "type": "depth"
+ },
+ {
+  "answer": "2001",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "supplier",
+    "Zeph Partners"
+   ],
+   [
+    "supplier",
+    "Esk Holdings"
+   ],
+   [
+    "former",
+    "Hana Hale"
+   ],
+   [
+    "ceo",
+    "Halden Industries"
+   ],
+   [
+    "supplier",
+    "Halden Industries"
+   ],
+   [
+    "founded",
+    "Nolan Industries"
+   ]
+  ],
+  "id": "T33",
+  "kind": "founded_chain5",
+  "params": {
+   "A": "Zeph Partners"
+  },
+  "question": "In which year was the key supplier of the company whose chief executive previously led the key supplier of the key supplier of Zeph Partners founded? Answer with the year.",
+  "split": "heldout",
+  "type": "depth"
+ },
+ {
+  "answer": "2001",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "supplier",
+    "Mosk Partners"
+   ],
+   [
+    "supplier",
+    "Corra Works"
+   ],
+   [
+    "former",
+    "Hana Hale"
+   ],
+   [
+    "ceo",
+    "Halden Industries"
+   ],
+   [
+    "supplier",
+    "Halden Industries"
+   ],
+   [
+    "founded",
+    "Nolan Industries"
+   ]
+  ],
+  "id": "T34",
+  "kind": "founded_chain5",
+  "params": {
+   "A": "Mosk Partners"
+  },
+  "question": "In which year was the key supplier of the company whose chief executive previously led the key supplier of the key supplier of Mosk Partners founded? Answer with the year.",
+  "split": "heldout",
+  "type": "depth"
+ },
+ {
+  "answer": "Kai Kato",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "supplier",
+    "Marro Works"
+   ],
+   [
+    "supplier",
+    "Lumen Works"
+   ],
+   [
+    "ceo",
+    "Grove Industries"
+   ]
+  ],
+  "id": "T35",
+  "kind": "ceo_ss",
+  "params": {
+   "A": "Marro Works"
+  },
+  "question": "Who is the chief executive of the key supplier of the key supplier of Marro Works? Answer with the person's name.",
+  "split": "heldout",
+  "type": "depth"
+ },
+ {
+  "answer": "Ivan Okafor",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "supplier",
+    "Orbin Industries"
+   ],
+   [
+    "supplier",
+    "Xandor Dynamics"
+   ],
+   [
+    "ceo",
+    "Quinto Industries"
+   ]
+  ],
+  "id": "T36",
+  "kind": "ceo_ss",
+  "params": {
+   "A": "Orbin Industries"
+  },
+  "question": "Who is the chief executive of the key supplier of the key supplier of Orbin Industries? Answer with the person's name.",
+  "split": "heldout",
+  "type": "depth"
+ },
+ {
+  "answer": "1990",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "supplier",
+    "Lorne Partners"
+   ],
+   [
+    "supplier",
+    "Jun Works"
+   ],
+   [
+    "former",
+    "Ivan Marsh"
+   ],
+   [
+    "ceo",
+    "Nolan Industries"
+   ],
+   [
+    "supplier",
+    "Nolan Industries"
+   ],
+   [
+    "founded",
+    "Opal Works"
+   ]
+  ],
+  "id": "T37",
+  "kind": "founded_chain5",
+  "params": {
+   "A": "Lorne Partners"
+  },
+  "question": "In which year was the key supplier of the company whose chief executive previously led the key supplier of the key supplier of Lorne Partners founded? Answer with the year.",
+  "split": "heldout",
+  "type": "depth"
+ },
+ {
+  "answer": "Maraview",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "supplier",
+    "Fable Dynamics"
+   ],
+   [
+    "supplier",
+    "Talo Systems"
+   ],
+   [
+    "supplier",
+    "Xandor Dynamics"
+   ],
+   [
+    "city",
+    "Quinto Industries"
+   ]
+  ],
+  "id": "T38",
+  "kind": "city_sss",
+  "params": {
+   "A": "Fable Dynamics"
+  },
+  "question": "In which city is the key supplier of the key supplier of the key supplier of Fable Dynamics headquartered? Answer with the city name.",
+  "split": "heldout",
+  "type": "depth"
+ },
+ {
+  "answer": "Kai Kato",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "supplier",
+    "Pryce Labs"
+   ],
+   [
+    "supplier",
+    "Lumen Works"
+   ],
+   [
+    "ceo",
+    "Grove Industries"
+   ]
+  ],
+  "id": "T39",
+  "kind": "ceo_ss",
+  "params": {
+   "A": "Pryce Labs"
+  },
+  "question": "Who is the chief executive of the key supplier of the key supplier of Pryce Labs? Answer with the person's name.",
+  "split": "heldout",
+  "type": "depth"
+ },
+ {
+  "answer": "1527",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "supplier",
+    "Wyra Labs"
+   ],
+   [
+    "supplier",
+    "Kael Systems"
+   ],
+   [
+    "former",
+    "Fern Reyes"
+   ],
+   [
+    "ceo",
+    "Mosk Partners"
+   ],
+   [
+    "revenue",
+    "Mosk Partners",
+    2025
+   ]
+  ],
+  "id": "T40",
+  "kind": "rev_former_ss",
+  "params": {
+   "A": "Wyra Labs"
+  },
+  "question": "What was the fiscal 2025 revenue, in millions of dollars, of the company whose chief executive previously led the key supplier of the key supplier of Wyra Labs? Answer with a whole number.",
+  "split": "heldout",
+  "type": "depth"
+ },
+ {
+  "answer": "3",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "sector_members",
+    "Biotech"
+   ],
+   [
+    "supplier",
+    "Cato Group"
+   ],
+   [
+    "founded",
+    "Vexa Group"
+   ],
+   [
+    "supplier",
+    "Fable Dynamics"
+   ],
+   [
+    "founded",
+    "Talo Systems"
+   ],
+   [
+    "supplier",
+    "Grove Industries"
+   ],
+   [
+    "founded",
+    "Zeph Partners"
+   ],
+   [
+    "supplier",
+    "Hollo Industries"
+   ],
+   [
+    "founded",
+    "Cato Group"
+   ],
+   [
+    "supplier",
+    "Mosk Partners"
+   ],
+   [
+    "founded",
+    "Corra Works"
+   ],
+   [
+    "supplier",
+    "Quorr Partners"
+   ],
+   [
+    "founded",
+    "Grove Industries"
+   ],
+   [
+    "supplier",
+    "Rilo Dynamics"
+   ],
+   [
+    "founded",
+    "Mosk Partners"
+   ],
+   [
+    "supplier",
+    "Ulmo Partners"
+   ],
+   [
+    "supplier",
+    "Varn Industries"
+   ],
+   [
+    "founded",
+    "Nolan Industries"
+   ],
+   [
+    "supplier",
+    "Yorick Dynamics"
+   ],
+   [
+    "founded",
+    "Brivo Systems"
+   ]
+  ],
+  "id": "T41",
+  "kind": "count_sup_founded",
+  "params": {
+   "S": "Biotech",
+   "Y": "2000"
+  },
+  "question": "How many Biotech companies have a key supplier that was founded before 2000? Answer with a whole number.",
+  "split": "dev",
+  "type": "mixed"
+ },
+ {
+  "answer": "2703",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "sector_members",
+    "Energy"
+   ],
+   [
+    "supplier",
+    "Ashby Works"
+   ],
+   [
+    "city",
+    "Fable Dynamics"
+   ],
+   [
+    "supplier",
+    "Brenna Partners"
+   ],
+   [
+    "city",
+    "Orbin Industries"
+   ],
+   [
+    "revenue",
+    "Brenna Partners",
+    2025
+   ],
+   [
+    "supplier",
+    "Brivo Systems"
+   ],
+   [
+    "city",
+    "Wexley Holdings"
+   ],
+   [
+    "supplier",
+    "Jarvo Systems"
+   ],
+   [
+    "city",
+    "Opal Works"
+   ],
+   [
+    "supplier",
+    "Kest Systems"
+   ],
+   [
+    "city",
+    "Harlo Works"
+   ],
+   [
+    "supplier",
+    "Lorne Partners"
+   ],
+   [
+    "city",
+    "Jun Works"
+   ],
+   [
+    "revenue",
+    "Lorne Partners",
+    2025
+   ],
+   [
+    "supplier",
+    "Nolan Industries"
+   ],
+   [
+    "supplier",
+    "Opal Works"
+   ],
+   [
+    "city",
+    "Rilo Dynamics"
+   ],
+   [
+    "supplier",
+    "Verin Industries"
+   ],
+   [
+    "supplier",
+    "Wyra Labs"
+   ],
+   [
+    "city",
+    "Kael Systems"
+   ]
+  ],
+  "id": "T42",
+  "kind": "supcity_total",
+  "params": {
+   "C": "Lindhaven",
+   "S": "Energy"
+  },
+  "question": "What is the total fiscal 2025 revenue, in millions of dollars, of the Energy companies whose key supplier is headquartered in Lindhaven? Answer with a whole number.",
+  "split": "dev",
+  "type": "mixed"
+ },
+ {
+  "answer": "2484",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "sector_members",
+    "Biotech"
+   ],
+   [
+    "supplier",
+    "Cato Group"
+   ],
+   [
+    "city",
+    "Vexa Group"
+   ],
+   [
+    "supplier",
+    "Fable Dynamics"
+   ],
+   [
+    "city",
+    "Talo Systems"
+   ],
+   [
+    "supplier",
+    "Grove Industries"
+   ],
+   [
+    "city",
+    "Zeph Partners"
+   ],
+   [
+    "supplier",
+    "Hollo Industries"
+   ],
+   [
+    "city",
+    "Cato Group"
+   ],
+   [
+    "supplier",
+    "Mosk Partners"
+   ],
+   [
+    "city",
+    "Corra Works"
+   ],
+   [
+    "revenue",
+    "Mosk Partners",
+    2025
+   ],
+   [
+    "supplier",
+    "Quorr Partners"
+   ],
+   [
+    "city",
+    "Grove Industries"
+   ],
+   [
+    "supplier",
+    "Rilo Dynamics"
+   ],
+   [
+    "city",
+    "Mosk Partners"
+   ],
+   [
+    "supplier",
+    "Ulmo Partners"
+   ],
+   [
+    "supplier",
+    "Varn Industries"
+   ],
+   [
+    "city",
+    "Nolan Industries"
+   ],
+   [
+    "supplier",
+    "Yorick Dynamics"
+   ],
+   [
+    "city",
+    "Brivo Systems"
+   ],
+   [
+    "revenue",
+    "Yorick Dynamics",
+    2025
+   ]
+  ],
+  "id": "T43",
+  "kind": "supcity_total",
+  "params": {
+   "C": "Corrow Bay",
+   "S": "Biotech"
+  },
+  "question": "What is the total fiscal 2025 revenue, in millions of dollars, of the Biotech companies whose key supplier is headquartered in Corrow Bay? Answer with a whole number.",
+  "split": "dev",
+  "type": "mixed"
+ },
+ {
+  "answer": "4700",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "sector_members",
+    "Energy"
+   ],
+   [
+    "supplier",
+    "Ashby Works"
+   ],
+   [
+    "city",
+    "Fable Dynamics"
+   ],
+   [
+    "supplier",
+    "Brenna Partners"
+   ],
+   [
+    "city",
+    "Orbin Industries"
+   ],
+   [
+    "supplier",
+    "Brivo Systems"
+   ],
+   [
+    "city",
+    "Wexley Holdings"
+   ],
+   [
+    "revenue",
+    "Brivo Systems",
+    2025
+   ],
+   [
+    "supplier",
+    "Jarvo Systems"
+   ],
+   [
+    "city",
+    "Opal Works"
+   ],
+   [
+    "revenue",
+    "Jarvo Systems",
+    2025
+   ],
+   [
+    "supplier",
+    "Kest Systems"
+   ],
+   [
+    "city",
+    "Harlo Works"
+   ],
+   [
+    "supplier",
+    "Lorne Partners"
+   ],
+   [
+    "city",
+    "Jun Works"
+   ],
+   [
+    "supplier",
+    "Nolan Industries"
+   ],
+   [
+    "revenue",
+    "Nolan Industries",
+    2025
+   ],
+   [
+    "supplier",
+    "Opal Works"
+   ],
+   [
+    "city",
+    "Rilo Dynamics"
+   ],
+   [
+    "supplier",
+    "Verin Industries"
+   ],
+   [
+    "revenue",
+    "Verin Industries",
+    2025
+   ],
+   [
+    "supplier",
+    "Wyra Labs"
+   ],
+   [
+    "city",
+    "Kael Systems"
+   ]
+  ],
+  "id": "T44",
+  "kind": "supcity_total",
+  "params": {
+   "C": "Corrow Bay",
+   "S": "Energy"
+  },
+  "question": "What is the total fiscal 2025 revenue, in millions of dollars, of the Energy companies whose key supplier is headquartered in Corrow Bay? Answer with a whole number.",
+  "split": "dev",
+  "type": "mixed"
+ },
+ {
+  "answer": "Nexo Group",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "sector_members",
+    "Robotics"
+   ],
+   [
+    "supplier",
+    "Faro Partners"
+   ],
+   [
+    "revenue",
+    "Siva Group",
+    2025
+   ],
+   [
+    "supplier",
+    "Ister Works"
+   ],
+   [
+    "revenue",
+    "Yorick Dynamics",
+    2025
+   ],
+   [
+    "supplier",
+    "Ivo Holdings"
+   ],
+   [
+    "revenue",
+    "Gisel Works",
+    2025
+   ],
+   [
+    "supplier",
+    "Quinto Industries"
+   ],
+   [
+    "revenue",
+    "Orbin Industries",
+    2025
+   ],
+   [
+    "supplier",
+    "Siva Group"
+   ],
+   [
+    "revenue",
+    "Nexo Group",
+    2025
+   ],
+   [
+    "supplier",
+    "Tyrel Holdings"
+   ],
+   [
+    "revenue",
+    "Sorin Dynamics",
+    2025
+   ],
+   [
+    "supplier",
+    "Xandor Dynamics"
+   ],
+   [
+    "revenue",
+    "Quinto Industries",
+    2025
+   ],
+   [
+    "supplier",
+    "Zellen Works"
+   ],
+   [
+    "revenue",
+    "Corra Works",
+    2025
+   ],
+   [
+    "supplier",
+    "Zorin Partners"
+   ],
+   [
+    "revenue",
+    "Rhee Dynamics",
+    2025
+   ]
+  ],
+  "id": "T45",
+  "kind": "top_supplier_rev",
+  "params": {
+   "S": "Robotics"
+  },
+  "question": "Among the key suppliers of the Robotics companies, which one reported the highest fiscal 2025 revenue? Answer with the company name.",
+  "split": "dev",
+  "type": "mixed"
+ },
+ {
+  "answer": "Quorr Partners",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "sector_members",
+    "Fintech"
+   ],
+   [
+    "supplier",
+    "Calix Partners"
+   ],
+   [
+    "revenue",
+    "Elvan Systems",
+    2025
+   ],
+   [
+    "supplier",
+    "Harlo Works"
+   ],
+   [
+    "revenue",
+    "Mira Industries",
+    2025
+   ],
+   [
+    "supplier",
+    "Kiro Group"
+   ],
+   [
+    "revenue",
+    "Varn Industries",
+    2025
+   ],
+   [
+    "supplier",
+    "Mira Industries"
+   ],
+   [
+    "revenue",
+    "Halden Industries",
+    2025
+   ],
+   [
+    "supplier",
+    "Orbin Industries"
+   ],
+   [
+    "revenue",
+    "Xandor Dynamics",
+    2025
+   ],
+   [
+    "supplier",
+    "Pell Systems"
+   ],
+   [
+    "revenue",
+    "Rhee Dynamics",
+    2025
+   ],
+   [
+    "supplier",
+    "Sorin Dynamics"
+   ],
+   [
+    "supplier",
+    "Talo Systems"
+   ],
+   [
+    "supplier",
+    "Yalo Labs"
+   ],
+   [
+    "revenue",
+    "Quorr Partners",
+    2025
+   ],
+   [
+    "supplier",
+    "Zeph Partners"
+   ],
+   [
+    "revenue",
+    "Esk Holdings",
+    2025
+   ]
+  ],
+  "id": "T46",
+  "kind": "top_supplier_rev",
+  "params": {
+   "S": "Fintech"
+  },
+  "question": "Among the key suppliers of the Fintech companies, which one reported the highest fiscal 2025 revenue? Answer with the company name.",
+  "split": "dev",
+  "type": "mixed"
+ },
+ {
+  "answer": "1438",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "sector_members",
+    "Logistics"
+   ],
+   [
+    "supplier",
+    "Abri Labs"
+   ],
+   [
+    "city",
+    "Ondra Group"
+   ],
+   [
+    "revenue",
+    "Abri Labs",
+    2025
+   ],
+   [
+    "supplier",
+    "Corra Works"
+   ],
+   [
+    "city",
+    "Wyra Labs"
+   ],
+   [
+    "supplier",
+    "Dorne Industries"
+   ],
+   [
+    "city",
+    "Halden Industries"
+   ],
+   [
+    "supplier",
+    "Esk Holdings"
+   ],
+   [
+    "supplier",
+    "Jun Works"
+   ],
+   [
+    "supplier",
+    "Lumen Works"
+   ],
+   [
+    "city",
+    "Grove Industries"
+   ],
+   [
+    "revenue",
+    "Lumen Works",
+    2025
+   ],
+   [
+    "supplier",
+    "Marro Works"
+   ],
+   [
+    "city",
+    "Lumen Works"
+   ],
+   [
+    "supplier",
+    "Nexo Group"
+   ],
+   [
+    "city",
+    "Kiro Group"
+   ],
+   [
+    "supplier",
+    "Ondra Group"
+   ],
+   [
+    "city",
+    "Jun Works"
+   ],
+   [
+    "supplier",
+    "Pryce Labs"
+   ]
+  ],
+  "id": "T47",
+  "kind": "supcity_total",
+  "params": {
+   "C": "Westmere",
+   "S": "Logistics"
+  },
+  "question": "What is the total fiscal 2025 revenue, in millions of dollars, of the Logistics companies whose key supplier is headquartered in Westmere? Answer with a whole number.",
+  "split": "heldout",
+  "type": "mixed"
+ },
+ {
+  "answer": "373",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "sector_members",
+    "Retail"
+   ],
+   [
+    "supplier",
+    "Elvan Systems"
+   ],
+   [
+    "city",
+    "Ondra Group"
+   ],
+   [
+    "revenue",
+    "Elvan Systems",
+    2025
+   ],
+   [
+    "supplier",
+    "Gisel Works"
+   ],
+   [
+    "city",
+    "Fable Dynamics"
+   ],
+   [
+    "supplier",
+    "Halden Industries"
+   ],
+   [
+    "city",
+    "Nolan Industries"
+   ],
+   [
+    "supplier",
+    "Kael Systems"
+   ],
+   [
+    "city",
+    "Harlo Works"
+   ],
+   [
+    "revenue",
+    "Kael Systems",
+    2025
+   ],
+   [
+    "supplier",
+    "Rhee Dynamics"
+   ],
+   [
+    "city",
+    "Varn Industries"
+   ],
+   [
+    "supplier",
+    "Tamsin Works"
+   ],
+   [
+    "city",
+    "Brivo Systems"
+   ],
+   [
+    "supplier",
+    "Taron Labs"
+   ],
+   [
+    "supplier",
+    "Vexa Group"
+   ],
+   [
+    "city",
+    "Dorne Industries"
+   ],
+   [
+    "supplier",
+    "Wexley Holdings"
+   ],
+   [
+    "city",
+    "Ulmo Partners"
+   ]
+  ],
+  "id": "T48",
+  "kind": "supcity_total",
+  "params": {
+   "C": "Westmere",
+   "S": "Retail"
+  },
+  "question": "What is the total fiscal 2025 revenue, in millions of dollars, of the Retail companies whose key supplier is headquartered in Westmere? Answer with a whole number.",
+  "split": "heldout",
+  "type": "mixed"
+ },
+ {
+  "answer": "2",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "sector_members",
+    "Biotech"
+   ],
+   [
+    "supplier",
+    "Cato Group"
+   ],
+   [
+    "founded",
+    "Vexa Group"
+   ],
+   [
+    "supplier",
+    "Fable Dynamics"
+   ],
+   [
+    "founded",
+    "Talo Systems"
+   ],
+   [
+    "supplier",
+    "Grove Industries"
+   ],
+   [
+    "founded",
+    "Zeph Partners"
+   ],
+   [
+    "supplier",
+    "Hollo Industries"
+   ],
+   [
+    "founded",
+    "Cato Group"
+   ],
+   [
+    "supplier",
+    "Mosk Partners"
+   ],
+   [
+    "founded",
+    "Corra Works"
+   ],
+   [
+    "supplier",
+    "Quorr Partners"
+   ],
+   [
+    "founded",
+    "Grove Industries"
+   ],
+   [
+    "supplier",
+    "Rilo Dynamics"
+   ],
+   [
+    "founded",
+    "Mosk Partners"
+   ],
+   [
+    "supplier",
+    "Ulmo Partners"
+   ],
+   [
+    "supplier",
+    "Varn Industries"
+   ],
+   [
+    "founded",
+    "Nolan Industries"
+   ],
+   [
+    "supplier",
+    "Yorick Dynamics"
+   ],
+   [
+    "founded",
+    "Brivo Systems"
+   ]
+  ],
+  "id": "T49",
+  "kind": "count_sup_founded",
+  "params": {
+   "S": "Biotech",
+   "Y": "1990"
+  },
+  "question": "How many Biotech companies have a key supplier that was founded before 1990? Answer with a whole number.",
+  "split": "heldout",
+  "type": "mixed"
+ },
+ {
+  "answer": "Harlo Works",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "sector_members",
+    "Retail"
+   ],
+   [
+    "supplier",
+    "Elvan Systems"
+   ],
+   [
+    "revenue",
+    "Ondra Group",
+    2025
+   ],
+   [
+    "supplier",
+    "Gisel Works"
+   ],
+   [
+    "revenue",
+    "Fable Dynamics",
+    2025
+   ],
+   [
+    "supplier",
+    "Halden Industries"
+   ],
+   [
+    "revenue",
+    "Nolan Industries",
+    2025
+   ],
+   [
+    "supplier",
+    "Kael Systems"
+   ],
+   [
+    "revenue",
+    "Harlo Works",
+    2025
+   ],
+   [
+    "supplier",
+    "Rhee Dynamics"
+   ],
+   [
+    "revenue",
+    "Varn Industries",
+    2025
+   ],
+   [
+    "supplier",
+    "Tamsin Works"
+   ],
+   [
+    "revenue",
+    "Brivo Systems",
+    2025
+   ],
+   [
+    "supplier",
+    "Taron Labs"
+   ],
+   [
+    "supplier",
+    "Vexa Group"
+   ],
+   [
+    "revenue",
+    "Dorne Industries",
+    2025
+   ],
+   [
+    "supplier",
+    "Wexley Holdings"
+   ],
+   [
+    "revenue",
+    "Ulmo Partners",
+    2025
+   ]
+  ],
+  "id": "T50",
+  "kind": "top_supplier_rev",
+  "params": {
+   "S": "Retail"
+  },
+  "question": "Among the key suppliers of the Retail companies, which one reported the highest fiscal 2025 revenue? Answer with the company name.",
+  "split": "heldout",
+  "type": "mixed"
+ },
+ {
+  "answer": "3681",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "sector_members",
+    "Fintech"
+   ],
+   [
+    "supplier",
+    "Calix Partners"
+   ],
+   [
+    "city",
+    "Elvan Systems"
+   ],
+   [
+    "supplier",
+    "Harlo Works"
+   ],
+   [
+    "city",
+    "Mira Industries"
+   ],
+   [
+    "supplier",
+    "Kiro Group"
+   ],
+   [
+    "city",
+    "Varn Industries"
+   ],
+   [
+    "supplier",
+    "Mira Industries"
+   ],
+   [
+    "city",
+    "Halden Industries"
+   ],
+   [
+    "supplier",
+    "Orbin Industries"
+   ],
+   [
+    "city",
+    "Xandor Dynamics"
+   ],
+   [
+    "revenue",
+    "Orbin Industries",
+    2025
+   ],
+   [
+    "supplier",
+    "Pell Systems"
+   ],
+   [
+    "city",
+    "Rhee Dynamics"
+   ],
+   [
+    "supplier",
+    "Sorin Dynamics"
+   ],
+   [
+    "supplier",
+    "Talo Systems"
+   ],
+   [
+    "revenue",
+    "Talo Systems",
+    2025
+   ],
+   [
+    "supplier",
+    "Yalo Labs"
+   ],
+   [
+    "city",
+    "Quorr Partners"
+   ],
+   [
+    "revenue",
+    "Yalo Labs",
+    2025
+   ],
+   [
+    "supplier",
+    "Zeph Partners"
+   ],
+   [
+    "city",
+    "Esk Holdings"
+   ],
+   [
+    "revenue",
+    "Zeph Partners",
+    2025
+   ]
+  ],
+  "id": "T51",
+  "kind": "supcity_total",
+  "params": {
+   "C": "Maraview",
+   "S": "Fintech"
+  },
+  "question": "What is the total fiscal 2025 revenue, in millions of dollars, of the Fintech companies whose key supplier is headquartered in Maraview? Answer with a whole number.",
+  "split": "heldout",
+  "type": "mixed"
+ },
+ {
+  "answer": "4",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "sector_members",
+    "Retail"
+   ],
+   [
+    "supplier",
+    "Elvan Systems"
+   ],
+   [
+    "founded",
+    "Ondra Group"
+   ],
+   [
+    "supplier",
+    "Gisel Works"
+   ],
+   [
+    "founded",
+    "Fable Dynamics"
+   ],
+   [
+    "supplier",
+    "Halden Industries"
+   ],
+   [
+    "founded",
+    "Nolan Industries"
+   ],
+   [
+    "supplier",
+    "Kael Systems"
+   ],
+   [
+    "founded",
+    "Harlo Works"
+   ],
+   [
+    "supplier",
+    "Rhee Dynamics"
+   ],
+   [
+    "founded",
+    "Varn Industries"
+   ],
+   [
+    "supplier",
+    "Tamsin Works"
+   ],
+   [
+    "founded",
+    "Brivo Systems"
+   ],
+   [
+    "supplier",
+    "Taron Labs"
+   ],
+   [
+    "supplier",
+    "Vexa Group"
+   ],
+   [
+    "founded",
+    "Dorne Industries"
+   ],
+   [
+    "supplier",
+    "Wexley Holdings"
+   ],
+   [
+    "founded",
+    "Ulmo Partners"
+   ]
+  ],
+  "id": "T52",
+  "kind": "count_sup_founded",
+  "params": {
+   "S": "Retail",
+   "Y": "1990"
+  },
+  "question": "How many Retail companies have a key supplier that was founded before 1990? Answer with a whole number.",
+  "split": "heldout",
+  "type": "mixed"
+ },
+ {
+  "answer": "2",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "sector_members",
+    "Energy"
+   ],
+   [
+    "supplier",
+    "Ashby Works"
+   ],
+   [
+    "founded",
+    "Fable Dynamics"
+   ],
+   [
+    "supplier",
+    "Brenna Partners"
+   ],
+   [
+    "founded",
+    "Orbin Industries"
+   ],
+   [
+    "supplier",
+    "Brivo Systems"
+   ],
+   [
+    "founded",
+    "Wexley Holdings"
+   ],
+   [
+    "supplier",
+    "Jarvo Systems"
+   ],
+   [
+    "founded",
+    "Opal Works"
+   ],
+   [
+    "supplier",
+    "Kest Systems"
+   ],
+   [
+    "founded",
+    "Harlo Works"
+   ],
+   [
+    "supplier",
+    "Lorne Partners"
+   ],
+   [
+    "founded",
+    "Jun Works"
+   ],
+   [
+    "supplier",
+    "Nolan Industries"
+   ],
+   [
+    "supplier",
+    "Opal Works"
+   ],
+   [
+    "founded",
+    "Rilo Dynamics"
+   ],
+   [
+    "supplier",
+    "Verin Industries"
+   ],
+   [
+    "supplier",
+    "Wyra Labs"
+   ],
+   [
+    "founded",
+    "Kael Systems"
+   ]
+  ],
+  "id": "T53",
+  "kind": "count_sup_founded",
+  "params": {
+   "S": "Energy",
+   "Y": "1990"
+  },
+  "question": "How many Energy companies have a key supplier that was founded before 1990? Answer with a whole number.",
+  "split": "heldout",
+  "type": "mixed"
+ },
+ {
+  "answer": "4",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "sector_members",
+    "Robotics"
+   ],
+   [
+    "supplier",
+    "Faro Partners"
+   ],
+   [
+    "founded",
+    "Siva Group"
+   ],
+   [
+    "supplier",
+    "Ister Works"
+   ],
+   [
+    "founded",
+    "Yorick Dynamics"
+   ],
+   [
+    "supplier",
+    "Ivo Holdings"
+   ],
+   [
+    "founded",
+    "Gisel Works"
+   ],
+   [
+    "supplier",
+    "Quinto Industries"
+   ],
+   [
+    "founded",
+    "Orbin Industries"
+   ],
+   [
+    "supplier",
+    "Siva Group"
+   ],
+   [
+    "founded",
+    "Nexo Group"
+   ],
+   [
+    "supplier",
+    "Tyrel Holdings"
+   ],
+   [
+    "founded",
+    "Sorin Dynamics"
+   ],
+   [
+    "supplier",
+    "Xandor Dynamics"
+   ],
+   [
+    "founded",
+    "Quinto Industries"
+   ],
+   [
+    "supplier",
+    "Zellen Works"
+   ],
+   [
+    "founded",
+    "Corra Works"
+   ],
+   [
+    "supplier",
+    "Zorin Partners"
+   ],
+   [
+    "founded",
+    "Rhee Dynamics"
+   ]
+  ],
+  "id": "T54",
+  "kind": "count_sup_founded",
+  "params": {
+   "S": "Robotics",
+   "Y": "2000"
+  },
+  "question": "How many Robotics companies have a key supplier that was founded before 2000? Answer with a whole number.",
+  "split": "heldout",
+  "type": "mixed"
+ },
+ {
+  "answer": "Harlo Works",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "sector_members",
+    "Energy"
+   ],
+   [
+    "supplier",
+    "Ashby Works"
+   ],
+   [
+    "revenue",
+    "Fable Dynamics",
+    2025
+   ],
+   [
+    "supplier",
+    "Brenna Partners"
+   ],
+   [
+    "revenue",
+    "Orbin Industries",
+    2025
+   ],
+   [
+    "supplier",
+    "Brivo Systems"
+   ],
+   [
+    "revenue",
+    "Wexley Holdings",
+    2025
+   ],
+   [
+    "supplier",
+    "Jarvo Systems"
+   ],
+   [
+    "revenue",
+    "Opal Works",
+    2025
+   ],
+   [
+    "supplier",
+    "Kest Systems"
+   ],
+   [
+    "revenue",
+    "Harlo Works",
+    2025
+   ],
+   [
+    "supplier",
+    "Lorne Partners"
+   ],
+   [
+    "revenue",
+    "Jun Works",
+    2025
+   ],
+   [
+    "supplier",
+    "Nolan Industries"
+   ],
+   [
+    "supplier",
+    "Opal Works"
+   ],
+   [
+    "revenue",
+    "Rilo Dynamics",
+    2025
+   ],
+   [
+    "supplier",
+    "Verin Industries"
+   ],
+   [
+    "supplier",
+    "Wyra Labs"
+   ],
+   [
+    "revenue",
+    "Kael Systems",
+    2025
+   ]
+  ],
+  "id": "T55",
+  "kind": "top_supplier_rev",
+  "params": {
+   "S": "Energy"
+  },
+  "question": "Among the key suppliers of the Energy companies, which one reported the highest fiscal 2025 revenue? Answer with the company name.",
+  "split": "heldout",
+  "type": "mixed"
+ },
+ {
+  "answer": "Nolan Industries",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "sector_members",
+    "Biotech"
+   ],
+   [
+    "supplier",
+    "Cato Group"
+   ],
+   [
+    "revenue",
+    "Vexa Group",
+    2025
+   ],
+   [
+    "supplier",
+    "Fable Dynamics"
+   ],
+   [
+    "revenue",
+    "Talo Systems",
+    2025
+   ],
+   [
+    "supplier",
+    "Grove Industries"
+   ],
+   [
+    "revenue",
+    "Zeph Partners",
+    2025
+   ],
+   [
+    "supplier",
+    "Hollo Industries"
+   ],
+   [
+    "revenue",
+    "Cato Group",
+    2025
+   ],
+   [
+    "supplier",
+    "Mosk Partners"
+   ],
+   [
+    "revenue",
+    "Corra Works",
+    2025
+   ],
+   [
+    "supplier",
+    "Quorr Partners"
+   ],
+   [
+    "revenue",
+    "Grove Industries",
+    2025
+   ],
+   [
+    "supplier",
+    "Rilo Dynamics"
+   ],
+   [
+    "revenue",
+    "Mosk Partners",
+    2025
+   ],
+   [
+    "supplier",
+    "Ulmo Partners"
+   ],
+   [
+    "supplier",
+    "Varn Industries"
+   ],
+   [
+    "revenue",
+    "Nolan Industries",
+    2025
+   ],
+   [
+    "supplier",
+    "Yorick Dynamics"
+   ],
+   [
+    "revenue",
+    "Brivo Systems",
+    2025
+   ]
+  ],
+  "id": "T56",
+  "kind": "top_supplier_rev",
+  "params": {
+   "S": "Biotech"
+  },
+  "question": "Among the key suppliers of the Biotech companies, which one reported the highest fiscal 2025 revenue? Answer with the company name.",
+  "split": "heldout",
+  "type": "mixed"
+ },
+ {
+  "answer": "Ondra Group",
+  "answer_kind": "name",
+  "evidence": [
+   [
+    "sector_members",
+    "Logistics"
+   ],
+   [
+    "supplier",
+    "Abri Labs"
+   ],
+   [
+    "revenue",
+    "Ondra Group",
+    2025
+   ],
+   [
+    "supplier",
+    "Corra Works"
+   ],
+   [
+    "revenue",
+    "Wyra Labs",
+    2025
+   ],
+   [
+    "supplier",
+    "Dorne Industries"
+   ],
+   [
+    "revenue",
+    "Halden Industries",
+    2025
+   ],
+   [
+    "supplier",
+    "Esk Holdings"
+   ],
+   [
+    "supplier",
+    "Jun Works"
+   ],
+   [
+    "supplier",
+    "Lumen Works"
+   ],
+   [
+    "revenue",
+    "Grove Industries",
+    2025
+   ],
+   [
+    "supplier",
+    "Marro Works"
+   ],
+   [
+    "revenue",
+    "Lumen Works",
+    2025
+   ],
+   [
+    "supplier",
+    "Nexo Group"
+   ],
+   [
+    "revenue",
+    "Kiro Group",
+    2025
+   ],
+   [
+    "supplier",
+    "Ondra Group"
+   ],
+   [
+    "revenue",
+    "Jun Works",
+    2025
+   ],
+   [
+    "supplier",
+    "Pryce Labs"
+   ]
+  ],
+  "id": "T57",
+  "kind": "top_supplier_rev",
+  "params": {
+   "S": "Logistics"
+  },
+  "question": "Among the key suppliers of the Logistics companies, which one reported the highest fiscal 2025 revenue? Answer with the company name.",
+  "split": "heldout",
+  "type": "mixed"
+ },
+ {
+  "answer": "5",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "sector_members",
+    "Logistics"
+   ],
+   [
+    "supplier",
+    "Abri Labs"
+   ],
+   [
+    "founded",
+    "Ondra Group"
+   ],
+   [
+    "supplier",
+    "Corra Works"
+   ],
+   [
+    "founded",
+    "Wyra Labs"
+   ],
+   [
+    "supplier",
+    "Dorne Industries"
+   ],
+   [
+    "founded",
+    "Halden Industries"
+   ],
+   [
+    "supplier",
+    "Esk Holdings"
+   ],
+   [
+    "supplier",
+    "Jun Works"
+   ],
+   [
+    "supplier",
+    "Lumen Works"
+   ],
+   [
+    "founded",
+    "Grove Industries"
+   ],
+   [
+    "supplier",
+    "Marro Works"
+   ],
+   [
+    "founded",
+    "Lumen Works"
+   ],
+   [
+    "supplier",
+    "Nexo Group"
+   ],
+   [
+    "founded",
+    "Kiro Group"
+   ],
+   [
+    "supplier",
+    "Ondra Group"
+   ],
+   [
+    "founded",
+    "Jun Works"
+   ],
+   [
+    "supplier",
+    "Pryce Labs"
+   ]
+  ],
+  "id": "T58",
+  "kind": "count_sup_founded",
+  "params": {
+   "S": "Logistics",
+   "Y": "2000"
+  },
+  "question": "How many Logistics companies have a key supplier that was founded before 2000? Answer with a whole number.",
+  "split": "heldout",
+  "type": "mixed"
+ },
+ {
+  "answer": "1064",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "sector_members",
+    "Logistics"
+   ],
+   [
+    "supplier",
+    "Abri Labs"
+   ],
+   [
+    "city",
+    "Ondra Group"
+   ],
+   [
+    "supplier",
+    "Corra Works"
+   ],
+   [
+    "city",
+    "Wyra Labs"
+   ],
+   [
+    "revenue",
+    "Corra Works",
+    2025
+   ],
+   [
+    "supplier",
+    "Dorne Industries"
+   ],
+   [
+    "city",
+    "Halden Industries"
+   ],
+   [
+    "supplier",
+    "Esk Holdings"
+   ],
+   [
+    "revenue",
+    "Esk Holdings",
+    2025
+   ],
+   [
+    "supplier",
+    "Jun Works"
+   ],
+   [
+    "supplier",
+    "Lumen Works"
+   ],
+   [
+    "city",
+    "Grove Industries"
+   ],
+   [
+    "supplier",
+    "Marro Works"
+   ],
+   [
+    "city",
+    "Lumen Works"
+   ],
+   [
+    "supplier",
+    "Nexo Group"
+   ],
+   [
+    "city",
+    "Kiro Group"
+   ],
+   [
+    "supplier",
+    "Ondra Group"
+   ],
+   [
+    "city",
+    "Jun Works"
+   ],
+   [
+    "supplier",
+    "Pryce Labs"
+   ]
+  ],
+  "id": "T59",
+  "kind": "supcity_total",
+  "params": {
+   "C": "Maraview",
+   "S": "Logistics"
+  },
+  "question": "What is the total fiscal 2025 revenue, in millions of dollars, of the Logistics companies whose key supplier is headquartered in Maraview? Answer with a whole number.",
+  "split": "heldout",
+  "type": "mixed"
+ },
+ {
+  "answer": "7",
+  "answer_kind": "number",
+  "evidence": [
+   [
+    "sector_members",
+    "Biotech"
+   ],
+   [
+    "supplier",
+    "Cato Group"
+   ],
+   [
+    "founded",
+    "Vexa Group"
+   ],
+   [
+    "supplier",
+    "Fable Dynamics"
+   ],
+   [
+    "founded",
+    "Talo Systems"
+   ],
+   [
+    "supplier",
+    "Grove Industries"
+   ],
+   [
+    "founded",
+    "Zeph Partners"
+   ],
+   [
+    "supplier",
+    "Hollo Industries"
+   ],
+   [
+    "founded",
+    "Cato Group"
+   ],
+   [
+    "supplier",
+    "Mosk Partners"
+   ],
+   [
+    "founded",
+    "Corra Works"
+   ],
+   [
+    "supplier",
+    "Quorr Partners"
+   ],
+   [
+    "founded",
+    "Grove Industries"
+   ],
+   [
+    "supplier",
+    "Rilo Dynamics"
+   ],
+   [
+    "founded",
+    "Mosk Partners"
+   ],
+   [
+    "supplier",
+    "Ulmo Partners"
+   ],
+   [
+    "supplier",
+    "Varn Industries"
+   ],
+   [
+    "founded",
+    "Nolan Industries"
+   ],
+   [
+    "supplier",
+    "Yorick Dynamics"
+   ],
+   [
+    "founded",
+    "Brivo Systems"
+   ]
+  ],
+  "id": "T60",
+  "kind": "count_sup_founded",
+  "params": {
+   "S": "Biotech",
+   "Y": "2010"
+  },
+  "question": "How many Biotech companies have a key supplier that was founded before 2010? Answer with a whole number.",
+  "split": "heldout",
+  "type": "mixed"
+ }
+]
