@@ -65,7 +65,7 @@ Every row below runs on the held-out tasks only. The budget levels were set on t
 
 | Architecture | Solved (95% CI) | Breadth | Depth | Mixed | Tokens per task (95% CI) | Tool calls | Calls on the critical path | Handoff loss |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Orchestrator and workers | 100% (91% to 100%) | 13/13 | 13/13 | 14/14 | 13,278 (11,007 to 15,466) | 18.2 | 11.4 | 0% |
+| Orchestrator and workers | 100% (91% to 100%) | 13/13 | 13/13 | 14/14 | 13,278 (11,007 to 15,466) | 18.3 | 11.4 | 0% |
 | Pipeline | 95% (83% to 99%) | 12/13 | 13/13 | 13/14 | 20,733 (16,746 to 24,483) | 17.5 | 20.5 | 2% |
 | Single agent with scratchpad | 100% (91% to 100%) | 13/13 | 13/13 | 14/14 | 18,820 (15,203 to 22,252) | 16.9 | 17.9 | n/a |
 | Single agent | 100% (91% to 100%) | 13/13 | 13/13 | 14/14 | 20,332 (15,899 to 24,495) | 16.9 | 17.9 | n/a |
@@ -76,7 +76,7 @@ Every row below runs on the held-out tasks only. The budget levels were set on t
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Orchestrator and workers | 45% (31% to 60%) | 4/13 | 13/13 | 1/14 | 6,609 (6,234 to 6,942) | 9.6 | 8.5 | 1% |
 | Pipeline | 50% (35% to 65%) | 5/13 | 13/13 | 2/14 | 8,218 (7,636 to 8,725) | 10.5 | 13.5 | 3% |
-| Single agent with scratchpad | 45% (31% to 60%) | 4/13 | 13/13 | 1/14 | 8,150 (7,560 to 8,655) | 9.4 | 10.4 | n/a |
+| Single agent with scratchpad | 45% (31% to 60%) | 4/13 | 13/13 | 1/14 | 8,150 (7,560 to 8,655) | 9.5 | 10.5 | n/a |
 | Single agent | 50% (35% to 65%) | 5/13 | 13/13 | 2/14 | 7,710 (6,998 to 8,331) | 10.1 | 11.1 | n/a |
 <!-- /splitbench:results -->
 
@@ -85,12 +85,12 @@ Each design runs the same tasks as the single agent, so each task gives one pair
 <!-- splitbench:paired -->
 | Budget | Compared with the single agent | Tasks | Change in solved share (95% CI) | Change in tokens per task (95% CI) |
 | --- | --- | --- | --- | --- |
-| loose | Orchestrator and workers | 40 | +0 points (+0 to +0) | -7,054 (-9,314 to -4,877) |
-| loose | Pipeline | 40 | -5 points (-12 to +0) | +401 (-818 to +1,539) |
-| loose | Single agent with scratchpad | 40 | +0 points (+0 to +0) | -1,512 (-2,410 to -623) |
-| tight | Orchestrator and workers | 40 | -5 points (-12 to +0) | -1,101 (-1,532 to -660) |
-| tight | Pipeline | 40 | +0 points (+0 to +0) | +508 (+313 to +703) |
-| tight | Single agent with scratchpad | 40 | -5 points (-12 to +0) | +440 (+259 to +603) |
+| loose | Orchestrator and workers | 40 | +0.0 points (+0.0 to +0.0) | -7,054 (-9,314 to -4,877) |
+| loose | Pipeline | 40 | -5.0 points (-12.5 to +0.0) | +401 (-818 to +1,539) |
+| loose | Single agent with scratchpad | 40 | +0.0 points (+0.0 to +0.0) | -1,512 (-2,410 to -623) |
+| tight | Orchestrator and workers | 40 | -5.0 points (-12.5 to +0.0) | -1,101 (-1,532 to -660) |
+| tight | Pipeline | 40 | +0.0 points (+0.0 to +0.0) | +508 (+313 to +703) |
+| tight | Single agent with scratchpad | 40 | -5.0 points (-12.5 to +0.0) | +440 (+259 to +603) |
 <!-- /splitbench:paired -->
 
 A rebuild from a second corpus seed tells the same story:
@@ -172,7 +172,7 @@ Record mode stores every request and response under `results/cache/`. Replay mod
 - **Intervals cover task sampling only.** The scripted model has no sampling noise, so a rerun gives the same numbers. The second seed is a rebuild of the corpus, not a second sample of the model.
 - **Token counts are estimates.** The harness counts one token for every four characters of the exact prompt and output. Provider counts differ, and record mode logs them next to the harness count.
 - **The tasks are invented.** Each fact sits in one clear sentence. Real documents are messier, and search on them is noisier.
-- **Parallel time is a proxy.** Workers run in lockstep for the scripted model, so the report counts calls on the critical path instead of seconds.
+- **Parallel time is a proxy.** Workers take turns in lockstep for every model, because each prompt shows the shared budget left, and real threads would make that line depend on timing. So the report counts calls on the critical path instead of seconds, which simulates a parallel run.
 
 ## Glossary
 

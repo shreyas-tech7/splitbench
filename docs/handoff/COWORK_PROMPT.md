@@ -4,6 +4,7 @@ Paste this into Claude Cowork.
 
 ```text
 You are helping Shreyas finish the GitHub setup for his private repo shreyas-tech7/splitbench.
+Do not ask questions, and do not stop without a finished result.
 Do only the free steps below that can be undone. Do not make the repo public, publish a package,
 enter or create any key, sign in for Shreyas or pay for anything. If a step needs any of those, stop
 and list it for Shreyas.

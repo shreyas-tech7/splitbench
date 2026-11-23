@@ -104,3 +104,19 @@ def test_threads_and_lockstep_agree_when_the_budget_is_loose():
     a = agents.orchestrator(t, ScriptedModel(), CORPUS, Budget(*BIG), parallel="threads")
     b = agents.orchestrator(t, ScriptedModel(), CORPUS, Budget(*BIG), parallel="lockstep")
     assert a.answer == b.answer == t["answer"]
+
+
+class _BrokenWorkerModel(ScriptedModel):
+    """Workers raise, as a provider error would after every retry."""
+
+    def complete(self, messages, max_output):
+        if "Your role: worker" in messages[0]["content"]:
+            raise RuntimeError("provider 500")
+        return super().complete(messages, max_output)
+
+
+def test_a_worker_error_in_threads_mode_is_raised_not_hidden():
+    """Broken case: a worker thread that raises ends with no result and the run looks like a normal failure."""
+    t = first(ttype="breadth")
+    with pytest.raises(RuntimeError, match="provider 500"):
+        agents.orchestrator(t, _BrokenWorkerModel(), CORPUS, Budget(45_000, 40), parallel="threads")

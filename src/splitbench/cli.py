@@ -61,6 +61,10 @@ def _model(a):
     )
 
 
+def meta_path(model_name: str, tag: str):
+    return runner.RESULTS / f"meta-{runner.safe(model_name)}-{tag}.json"
+
+
 def cmd_run(a):
     model = _model(a)
     split = a.split
@@ -70,7 +74,9 @@ def cmd_run(a):
         levels=a.levels,
         archs=a.archs,
         limit=a.limit,
-        parallel="lockstep" if a.provider == "scripted" else a.parallel,
+        # Lockstep for every model: each worker's prompt shows the shared budget left, which
+        # depends on thread timing, so threads would make recorded prompts unreplayable.
+        parallel="lockstep",
         seed=a.corpus_seed,
     )
     meta = {
@@ -80,7 +86,7 @@ def cmd_run(a):
         "n_tasks": len({r["task"] for r in runner.load_runs(path)}),
         "bootstrap_seed": 0,
     }
-    (runner.RESULTS / f"meta-{model.name}-{runner.tag(split, a.corpus_seed)}.json").write_text(
+    meta_path(model.name, runner.tag(split, a.corpus_seed)).write_text(
         json.dumps(meta, indent=1, sort_keys=True) + "\n"
     )
     runner.finish_transcripts(model.name, split, seed=a.corpus_seed)
@@ -173,7 +179,6 @@ def main(argv=None) -> int:
     r.add_argument("--levels", nargs="+", default=list(runner.BUDGETS))
     r.add_argument("--archs", nargs="+", default=runner.ARCH_ORDER)
     r.add_argument("--limit", type=int, default=None, help="only the first N tasks of the split")
-    r.add_argument("--parallel", default="threads", choices=["threads", "lockstep"])
     r.add_argument(
         "--corpus-seed", type=int, default=None, help="rebuild the corpus from another seed, in memory"
     )

@@ -67,3 +67,13 @@ def test_mast_rules():
     assert metrics.mast_tag(r, t, False, None) == "FC1"  # wrong form
     r.answer = "13"
     assert metrics.mast_tag(r, t, False, None) == "FC3"
+
+
+def test_a_decimal_point_is_not_an_exact_match_for_a_whole_number():
+    """Broken case: "12.5" matched the key "125" because the point became a space and spaces were dropped."""
+    task = {"answer": "125", "answer_kind": "number"}
+    assert not metrics.correct("12.5", task)
+    assert not metrics.correct("1.25", task)
+    assert metrics.correct("125", task) and metrics.correct(" 125 ", task)
+    assert metrics.correct("1,250", {"answer": "1250", "answer_kind": "number"})
+    assert metrics.correct("$1,250", {"answer": "1250", "answer_kind": "number"})

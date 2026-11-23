@@ -112,3 +112,14 @@ def test_resumed_study_keeps_earlier_transcripts(tmp_path):
     rows = gzip.decompress(gz.read_bytes()).decode().splitlines()
     keys = [(json.loads(r)["task"], json.loads(r)["arch"]) for r in rows]
     assert len(keys) == 4 and len(set(keys)) == 4
+
+
+def test_result_files_for_a_model_name_with_a_slash(tmp_path, monkeypatch):
+    """Broken case: the openrouter model name holds "/", so writing its meta file failed."""
+    from splitbench import cli, report
+
+    monkeypatch.setattr(runner, "RESULTS", tmp_path)
+    monkeypatch.setattr(report, "ROOT", tmp_path.parent)
+    name = "meta-llama/llama-3.3-70b-instruct:free"
+    assert "/" not in cli.meta_path(name, "heldout").name
+    assert "/" not in report.summary_path(name).name

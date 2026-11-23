@@ -21,6 +21,13 @@ def items(s) -> list[str]:
     return [p.strip() for p in norm(s).split(",") if p.strip()]
 
 
+def _whole(s):
+    """A whole number from an answer like "1,250", "$1,250" or "1250 million". None otherwise."""
+    t = str(s).strip().lower().replace("$", "").replace("million", "").replace("dollars", "").strip()
+    t = re.sub(r"(?<=\d),(?=\d{3}\b)", "", t)
+    return int(t) if re.fullmatch(r"\d+", t) else None
+
+
 def correct(answer, task) -> bool:
     """Exact match after light normalization. List answers must match item by item, in order."""
     if answer is None:
@@ -28,8 +35,7 @@ def correct(answer, task) -> bool:
     if task["answer_kind"] == "list3":
         return items(answer) == items(task["answer"])
     if task["answer_kind"] == "number":
-        got = re.sub(r"(?<=\d) (?=\d{3}\b)", "", norm(answer)).replace(" , ", "")
-        return got.replace(" ", "") == norm(task["answer"]).replace(" ", "")
+        return _whole(answer) is not None and _whole(answer) == _whole(task["answer"])
     return norm(answer) == norm(task["answer"])
 
 
@@ -103,7 +109,7 @@ def mast_tag(run, task, ok: bool, hand: dict | None) -> str | None:
     """Tag a failed run with one MAST group, by fixed rules applied in this order.
 
     1. A multi-agent run that lost facts in a handoff: FC2 (information withholding).
-    2. A run that stopped at the budget with no answer and repeated a tool call: FC1 (step repetition).
+    2. A run that stopped with no answer and repeated a tool call: FC1 (step repetition).
     3. A run that stopped with no answer: FC3 (premature termination).
     4. An answer in the wrong form: FC1 (disobeyed the task specification).
     5. A wrong answer while every needed fact was in the final context: FC3 (incorrect verification).

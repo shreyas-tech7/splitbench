@@ -79,12 +79,12 @@ At the loose budget the orchestrator matches the single agent on wide tasks for 
 <!-- splitbench:paired -->
 | Budget | Compared with the single agent | Tasks | Change in solved share (95% CI) | Change in tokens per task (95% CI) |
 | --- | --- | --- | --- | --- |
-| loose | Orchestrator and workers | 40 | +0 points (+0 to +0) | -7,054 (-9,314 to -4,877) |
-| loose | Pipeline | 40 | -5 points (-12 to +0) | +401 (-818 to +1,539) |
-| loose | Single agent with scratchpad | 40 | +0 points (+0 to +0) | -1,512 (-2,410 to -623) |
-| tight | Orchestrator and workers | 40 | -5 points (-12 to +0) | -1,101 (-1,532 to -660) |
-| tight | Pipeline | 40 | +0 points (+0 to +0) | +508 (+313 to +703) |
-| tight | Single agent with scratchpad | 40 | -5 points (-12 to +0) | +440 (+259 to +603) |
+| loose | Orchestrator and workers | 40 | +0.0 points (+0.0 to +0.0) | -7,054 (-9,314 to -4,877) |
+| loose | Pipeline | 40 | -5.0 points (-12.5 to +0.0) | +401 (-818 to +1,539) |
+| loose | Single agent with scratchpad | 40 | +0.0 points (+0.0 to +0.0) | -1,512 (-2,410 to -623) |
+| tight | Orchestrator and workers | 40 | -5.0 points (-12.5 to +0.0) | -1,101 (-1,532 to -660) |
+| tight | Pipeline | 40 | +0.0 points (+0.0 to +0.0) | +508 (+313 to +703) |
+| tight | Single agent with scratchpad | 40 | -5.0 points (-12.5 to +0.0) | +440 (+259 to +603) |
 <!-- /splitbench:paired -->
 
 **13. What does the pipeline lose?**

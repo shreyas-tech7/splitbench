@@ -12,6 +12,7 @@ import json
 import math
 import os
 import re
+import threading
 import time
 import urllib.error
 import urllib.request
@@ -204,7 +205,11 @@ class ChatModel:
             raise ReplayMiss(f"no recording for request {path.name}")
         else:
             raw = self._send(body)
-            path.write_text(json.dumps(raw, sort_keys=True, ensure_ascii=False), encoding="utf-8")
+            if not raw.get("choices"):
+                raise RuntimeError("provider answered with no choices, so nothing was cached")
+            tmp = path.with_suffix(f".{threading.get_ident()}.tmp")
+            tmp.write_text(json.dumps(raw, sort_keys=True, ensure_ascii=False), encoding="utf-8")
+            os.replace(tmp, path)
         text = raw["choices"][0]["message"].get("content") or ""
         usage = raw.get("usage") or {}
         return text, {

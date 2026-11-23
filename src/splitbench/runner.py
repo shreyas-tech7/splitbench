@@ -105,7 +105,13 @@ def runs_path(model_name: str, split: str, out: Path = RESULTS, seed: int | None
 def load_runs(path: Path) -> list[dict]:
     if not path.exists():
         return []
-    return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+    rows = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        try:
+            rows.append(json.loads(line))
+        except json.JSONDecodeError:
+            continue  # a line cut by a hard stop; that run is simply run again
+    return rows
 
 
 def study(
@@ -137,12 +143,14 @@ def study(
                     if (t["id"], arch, level) in done:
                         continue
                     rec, tr = run_one(t, arch, model, corpus, level, parallel)
-                    f.write(json.dumps(rec, sort_keys=True) + "\n")
-                    f.flush()
+                    # Transcript first, so a run never counts as done without its transcript.
                     tf.write(
                         json.dumps({"task": t["id"], "arch": arch, "level": level, **tr}, sort_keys=True)
                         + "\n"
                     )
+                    tf.flush()
+                    f.write(json.dumps(rec, sort_keys=True) + "\n")
+                    f.flush()
                     n_new += 1
     log(
         f"{n_new} new runs, {len(done)} resumed, file {path.relative_to(T.ROOT) if path.is_relative_to(T.ROOT) else path}"

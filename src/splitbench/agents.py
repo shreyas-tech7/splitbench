@@ -191,11 +191,21 @@ def run_parallel(agents: list[Agent], mode: str) -> None:
     """Run workers side by side. "lockstep" takes one step of each in turn, so a scripted run
     is deterministic. "threads" runs each worker in its own thread, for real models."""
     if mode == "threads":
-        ts = [threading.Thread(target=a.run) for a in agents]
+        errors: list[BaseException] = []
+
+        def target(a):
+            try:
+                a.run()
+            except BaseException as e:  # re-raised below, so a provider error never looks like a result
+                errors.append(e)
+
+        ts = [threading.Thread(target=target, args=(a,)) for a in agents]
         for t in ts:
             t.start()
         for t in ts:
             t.join()
+        if errors:
+            raise errors[0]
         return
     while not all(a.done for a in agents):
         for a in agents:
