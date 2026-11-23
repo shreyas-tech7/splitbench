@@ -92,8 +92,13 @@ def safe(name: str) -> str:
     return "".join(ch if ch.isalnum() or ch in "-." else "_" for ch in name)
 
 
-def runs_path(model_name: str, split: str, out: Path = RESULTS) -> Path:
-    return out / f"runs-{safe(model_name)}-{split}.jsonl"
+def tag(split: str, seed: int | None = None) -> str:
+    """File tag for a split. A corpus seed other than the frozen one adds a suffix."""
+    return split if seed in (None, T.SEED) else f"{split}-seed{seed}"
+
+
+def runs_path(model_name: str, split: str, out: Path = RESULTS, seed: int | None = None) -> Path:
+    return out / f"runs-{safe(model_name)}-{tag(split, seed)}.jsonl"
 
 
 def load_runs(path: Path) -> list[dict]:
@@ -111,14 +116,17 @@ def study(
     out: Path = RESULTS,
     limit: int | None = None,
     log=print,
+    seed: int | None = None,
 ) -> Path:
-    docs, tasks = T.load()
+    """Run the study. `seed` rebuilds the corpus and tasks in memory from another seed,
+    as a check that a result does not depend on one corpus. The frozen files stay as they are."""
+    docs, tasks = T.load() if seed in (None, T.SEED) else T.build(seed)
     corpus = Corpus(docs)
     chosen = [t for t in tasks if split == "all" or t["split"] == split][:limit]
     out.mkdir(parents=True, exist_ok=True)
-    path = runs_path(model.name, split, out)
+    path = runs_path(model.name, split, out, seed)
     done = {(r["task"], r["arch"], r["level"]) for r in load_runs(path)}
-    tpath = out / "transcripts" / f"{safe(model.name)}-{split}.jsonl"
+    tpath = out / "transcripts" / f"{safe(model.name)}-{tag(split, seed)}.jsonl"
     tpath.parent.mkdir(parents=True, exist_ok=True)
     n_new = 0
     with path.open("a", encoding="utf-8") as f, tpath.open("a", encoding="utf-8") as tf:
@@ -141,16 +149,27 @@ def study(
     return path
 
 
-def finish_transcripts(model_name: str, split: str, out: Path = RESULTS) -> Path | None:
-    """Gzip the transcript file with a fixed timestamp, so the same runs give the same bytes."""
-    src = out / "transcripts" / f"{safe(model_name)}-{split}.jsonl"
-    if not src.exists():
-        return None
+def finish_transcripts(
+    model_name: str, split: str, out: Path = RESULTS, seed: int | None = None
+) -> Path | None:
+    """Merge new transcript rows into the gzip archive, with a fixed timestamp.
+
+    Rows already in the archive stay, so a resumed study keeps earlier transcripts.
+    The same runs give the same bytes."""
+    src = out / "transcripts" / f"{safe(model_name)}-{tag(split, seed)}.jsonl"
     dst = src.with_suffix(".jsonl.gz")
-    rows = sorted(src.read_text(encoding="utf-8").splitlines())
+    rows = set()
+    if dst.exists():
+        rows.update(gzip.decompress(dst.read_bytes()).decode().splitlines())
+    if src.exists():
+        rows.update(src.read_text(encoding="utf-8").splitlines())
+    rows.discard("")
+    if not rows:
+        return None
     with open(dst, "wb") as raw, gzip.GzipFile(fileobj=raw, mode="wb", mtime=0, filename="") as g:
-        g.write(("\n".join(rows) + "\n").encode())
-    src.unlink()
+        g.write(("\n".join(sorted(rows)) + "\n").encode())
+    if src.exists():
+        src.unlink()
     return dst
 
 

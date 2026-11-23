@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import gzip
 import json
 import subprocess
 import sys
@@ -70,18 +71,19 @@ def cmd_run(a):
         archs=a.archs,
         limit=a.limit,
         parallel="lockstep" if a.provider == "scripted" else a.parallel,
+        seed=a.corpus_seed,
     )
     meta = {
         **runner.meta(),
         "model": model.name,
-        "seed": T.SEED,
+        "seed": a.corpus_seed or T.SEED,
         "n_tasks": len({r["task"] for r in runner.load_runs(path)}),
         "bootstrap_seed": 0,
     }
-    (runner.RESULTS / f"meta-{model.name}-{split}.json").write_text(
+    (runner.RESULTS / f"meta-{model.name}-{runner.tag(split, a.corpus_seed)}.json").write_text(
         json.dumps(meta, indent=1, sort_keys=True) + "\n"
     )
-    runner.finish_transcripts(model.name, split)
+    runner.finish_transcripts(model.name, split, seed=a.corpus_seed)
 
 
 def cmd_report(a):
@@ -105,6 +107,31 @@ def cmd_readme(a):
     return 1 if stale else 0
 
 
+def cmd_show(a):
+    """Print one recorded run as a readable trace."""
+    gz = runner.RESULTS / "transcripts" / f"{runner.safe(a.model_name)}-{a.split}.jsonl.gz"
+    for line in gzip.decompress(gz.read_bytes()).decode().splitlines():
+        row = json.loads(line)
+        if (row["task"], row["arch"], row["level"]) != (a.task, a.arch, a.level):
+            continue
+        for e in row["events"]:
+            if e["event"] == "model":
+                out = e["output"].replace("\n", " ")
+                cut = out[: a.width] + (" ..." if len(out) > a.width else "")
+                print(f"{e['agent']:>9} model  in {e['input_tokens']:>5}  out {e['output_tokens']:>4}  {cut}")
+            elif e["event"] == "state":
+                print(f"{e['agent']:>9} state  {e['state']}")
+            elif e["event"] == "stop":
+                print(f"{e['agent']:>9} stop   {e.get('reason', '')}")
+        for ag in row["agents"]:
+            if ag["role"] in ("single", "scratch", "lead", "checker"):
+                res = ag["result"]
+                print(f"{ag['id']:>9} answer {res.get('answer') if isinstance(res, dict) else res}")
+        return 0
+    print("no such run")
+    return 1
+
+
 def cmd_probe(a):
     rows = []
     for name, (base, key_env, _) in PROVIDERS.items():
@@ -116,7 +143,9 @@ def cmd_probe(a):
                 text=True,
                 timeout=20,
             )
-            code = out.stdout.strip() or out.stderr.strip()[-80:]
+            code = out.stdout.strip()
+            if code in ("", "000"):
+                code = out.stderr.strip()[-80:] or "no answer"
         except (OSError, subprocess.TimeoutExpired) as e:
             code = str(e)
         rows.append(
@@ -145,6 +174,9 @@ def main(argv=None) -> int:
     r.add_argument("--archs", nargs="+", default=runner.ARCH_ORDER)
     r.add_argument("--limit", type=int, default=None, help="only the first N tasks of the split")
     r.add_argument("--parallel", default="threads", choices=["threads", "lockstep"])
+    r.add_argument(
+        "--corpus-seed", type=int, default=None, help="rebuild the corpus from another seed, in memory"
+    )
     r.set_defaults(fn=cmd_run)
     for name in ("report", "readme"):
         x = sub.add_parser(name, help="write the summary, report and README blocks")
@@ -152,6 +184,14 @@ def main(argv=None) -> int:
         x.add_argument("--check", action="store_true", help="fail if a generated file is out of date")
         x.set_defaults(fn=cmd_report if name == "report" else cmd_readme)
     sub.add_parser("probe", help="check whether the record-mode hosts answer").set_defaults(fn=cmd_probe)
+    w = sub.add_parser("show", help="print one recorded run as a trace")
+    w.add_argument("task")
+    w.add_argument("arch", choices=runner.ARCH_ORDER)
+    w.add_argument("level", choices=list(runner.BUDGETS))
+    w.add_argument("--split", default="heldout")
+    w.add_argument("--model-name", default="scripted-v1")
+    w.add_argument("--width", type=int, default=90)
+    w.set_defaults(fn=cmd_show)
     a = p.parse_args(argv)
     return a.fn(a) or 0
 

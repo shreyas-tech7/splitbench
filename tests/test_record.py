@@ -1,5 +1,6 @@
 """Record mode against a local fake OpenAI-compatible server. Nothing leaves the machine."""
 
+import gzip
 import json
 import threading
 from http.server import BaseHTTPRequestHandler, HTTPServer
@@ -95,3 +96,19 @@ def test_runner_resumes(tmp_path):
     )
     rows = runner.load_runs(runner.runs_path(model.name, "dev", tmp_path))
     assert len(rows) == 4 and len({(r["task"], r["arch"]) for r in rows}) == 4
+
+
+def test_resumed_study_keeps_earlier_transcripts(tmp_path):
+    """Broken case: a resumed run with nothing new gzips an empty file over the transcripts."""
+    model = ScriptedModel()
+    quiet = {"split": "dev", "levels": ("tight",), "out": tmp_path, "limit": 2, "log": lambda *a: None}
+    runner.study(model, archs=["single"], **quiet)
+    runner.finish_transcripts(model.name, "dev", tmp_path)
+    runner.study(model, archs=["single"], **quiet)
+    runner.finish_transcripts(model.name, "dev", tmp_path)
+    runner.study(model, archs=["single", "scratchpad"], **quiet)
+    runner.finish_transcripts(model.name, "dev", tmp_path)
+    gz = tmp_path / "transcripts" / f"{model.name}-dev.jsonl.gz"
+    rows = gzip.decompress(gz.read_bytes()).decode().splitlines()
+    keys = [(json.loads(r)["task"], json.loads(r)["arch"]) for r in rows]
+    assert len(keys) == 4 and len(set(keys)) == 4

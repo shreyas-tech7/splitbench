@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    # Skip pushes that change only hand-written docs. Files with generated blocks
+    # still run `readme --check`.
+    paths:
+      - "**"
+      - "!**.md"
+      - "!docs/**"
+      - "README.md"
+      - "docs/index.html"
+      - "docs/REPORT.md"
+      - "docs/INTERVIEW_QA.md"
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: astral-sh/setup-uv@v6
+      - name: init.sh (install, lint, link check, offline tests)
+        run: ./init.sh
+      - name: Generated files are up to date
+        run: .venv/bin/splitbench readme --check
+      - name: Frozen corpus and tasks match their digest
+        run: .venv/bin/splitbench check-frozen

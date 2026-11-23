@@ -1,0 +1,9 @@
+{
+ "bootstrap_seed": 0,
+ "cpu": "Intel(R) Xeon(R) Processor @ 2.30GHz",
+ "date": "2026-11-23",
+ "model": "scripted-v1",
+ "n_tasks": 40,
+ "python": "3.11.18",
+ "seed": 11
+}

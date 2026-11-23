@@ -1,0 +1,462 @@
+{
+ "levels": {
+  "loose": {
+   "archs": {
+    "orchestrator": {
+     "by_type": {
+      "breadth": {
+       "k": 13,
+       "n": 13,
+       "tokens": 11715.846153846154
+      },
+      "depth": {
+       "k": 13,
+       "n": 13,
+       "tokens": 5679.461538461538
+      },
+      "mixed": {
+       "k": 14,
+       "n": 14,
+       "tokens": 21785.0
+      }
+     },
+     "critical_calls": 11.4,
+     "handoff_dropped": 0.0,
+     "handoff_loss": 0.0,
+     "handoff_runs": 40,
+     "hit_cap": 0,
+     "mast": {},
+     "n": 40,
+     "success": 1.0,
+     "success_ci": [
+      0.9123754607496077,
+      1.0
+     ],
+     "tokens": 13278.225,
+     "tokens_ci": [
+      11006.725,
+      15466.125
+     ],
+     "tool_calls": 18.25
+    },
+    "pipeline": {
+     "by_type": {
+      "breadth": {
+       "k": 12,
+       "n": 13,
+       "tokens": 22150.615384615383
+      },
+      "depth": {
+       "k": 13,
+       "n": 13,
+       "tokens": 6259.153846153846
+      },
+      "mixed": {
+       "k": 13,
+       "n": 14,
+       "tokens": 32855.57142857143
+      }
+     },
+     "critical_calls": 20.475,
+     "handoff_dropped": 0.05,
+     "handoff_loss": 0.018139097744360903,
+     "handoff_runs": 40,
+     "hit_cap": 2,
+     "mast": {
+      "FC2": 2
+     },
+     "n": 40,
+     "success": 0.95,
+     "success_ci": [
+      0.834958291820748,
+      0.9861796228538989
+     ],
+     "tokens": 20732.625,
+     "tokens_ci": [
+      16745.825,
+      24483.15
+     ],
+     "tool_calls": 17.475
+    },
+    "scratchpad": {
+     "by_type": {
+      "breadth": {
+       "k": 13,
+       "n": 13,
+       "tokens": 17347.846153846152
+      },
+      "depth": {
+       "k": 13,
+       "n": 13,
+       "tokens": 5937.923076923077
+      },
+      "mixed": {
+       "k": 14,
+       "n": 14,
+       "tokens": 32149.0
+      }
+     },
+     "critical_calls": 17.85,
+     "handoff_dropped": null,
+     "handoff_loss": null,
+     "handoff_runs": 0,
+     "hit_cap": 0,
+     "mast": {},
+     "n": 40,
+     "success": 1.0,
+     "success_ci": [
+      0.9123754607496077,
+      1.0
+     ],
+     "tokens": 18820.025,
+     "tokens_ci": [
+      15202.775,
+      22252.425
+     ],
+     "tool_calls": 16.85
+    },
+    "single": {
+     "by_type": {
+      "breadth": {
+       "k": 13,
+       "n": 13,
+       "tokens": 19321.846153846152
+      },
+      "depth": {
+       "k": 13,
+       "n": 13,
+       "tokens": 4953.2307692307695
+      },
+      "mixed": {
+       "k": 14,
+       "n": 14,
+       "tokens": 35549.92857142857
+      }
+     },
+     "critical_calls": 17.85,
+     "handoff_dropped": null,
+     "handoff_loss": null,
+     "handoff_runs": 0,
+     "hit_cap": 0,
+     "mast": {},
+     "n": 40,
+     "success": 1.0,
+     "success_ci": [
+      0.9123754607496077,
+      1.0
+     ],
+     "tokens": 20331.875,
+     "tokens_ci": [
+      15898.625,
+      24494.9
+     ],
+     "tool_calls": 16.85
+    }
+   },
+   "budget": {
+    "tokens": 45000,
+    "tool_calls": 40
+   },
+   "paired": {
+    "orchestrator": {
+     "n": 40,
+     "success_diff": 0.0,
+     "success_diff_ci": [
+      0.0,
+      0.0
+     ],
+     "token_diff": -7053.65,
+     "token_diff_ci": [
+      -9313.9,
+      -4877.375
+     ]
+    },
+    "pipeline": {
+     "n": 40,
+     "success_diff": -0.05,
+     "success_diff_ci": [
+      -0.125,
+      0.0
+     ],
+     "token_diff": 400.75,
+     "token_diff_ci": [
+      -818.0,
+      1539.325
+     ]
+    },
+    "scratchpad": {
+     "n": 40,
+     "success_diff": 0.0,
+     "success_diff_ci": [
+      0.0,
+      0.0
+     ],
+     "token_diff": -1511.85,
+     "token_diff_ci": [
+      -2409.725,
+      -622.95
+     ]
+    }
+   }
+  },
+  "tight": {
+   "archs": {
+    "orchestrator": {
+     "by_type": {
+      "breadth": {
+       "k": 4,
+       "n": 13,
+       "tokens": 7055.461538461538
+      },
+      "depth": {
+       "k": 13,
+       "n": 13,
+       "tokens": 5677.153846153846
+      },
+      "mixed": {
+       "k": 1,
+       "n": 14,
+       "tokens": 7059.928571428572
+      }
+     },
+     "critical_calls": 8.525,
+     "handoff_dropped": 0.008333333333333333,
+     "handoff_loss": 0.008333333333333333,
+     "handoff_runs": 40,
+     "hit_cap": 0,
+     "mast": {
+      "FC2": 1,
+      "FC3": 21
+     },
+     "n": 40,
+     "success": 0.45,
+     "success_ci": [
+      0.30705075280944705,
+      0.6017117011155924
+     ],
+     "tokens": 6609.075,
+     "tokens_ci": [
+      6233.575,
+      6941.95
+     ],
+     "tool_calls": 9.575
+    },
+    "pipeline": {
+     "by_type": {
+      "breadth": {
+       "k": 5,
+       "n": 13,
+       "tokens": 9167.923076923076
+      },
+      "depth": {
+       "k": 13,
+       "n": 13,
+       "tokens": 5943.153846153846
+      },
+      "mixed": {
+       "k": 2,
+       "n": 14,
+       "tokens": 9447.142857142857
+      }
+     },
+     "critical_calls": 13.525,
+     "handoff_dropped": 0.05625,
+     "handoff_loss": 0.02708333333333333,
+     "handoff_runs": 40,
+     "hit_cap": 2,
+     "mast": {
+      "FC2": 2,
+      "FC3": 18
+     },
+     "n": 40,
+     "success": 0.5,
+     "success_ci": [
+      0.35199278797099753,
+      0.6480072120290025
+     ],
+     "tokens": 8217.6,
+     "tokens_ci": [
+      7636.0,
+      8724.6
+     ],
+     "tool_calls": 10.525
+    },
+    "scratchpad": {
+     "by_type": {
+      "breadth": {
+       "k": 4,
+       "n": 13,
+       "tokens": 9429.615384615385
+      },
+      "depth": {
+       "k": 13,
+       "n": 13,
+       "tokens": 5935.923076923077
+      },
+      "mixed": {
+       "k": 1,
+       "n": 14,
+       "tokens": 9016.857142857143
+      }
+     },
+     "critical_calls": 10.45,
+     "handoff_dropped": null,
+     "handoff_loss": null,
+     "handoff_runs": 0,
+     "hit_cap": 0,
+     "mast": {
+      "FC3": 22
+     },
+     "n": 40,
+     "success": 0.45,
+     "success_ci": [
+      0.30705075280944705,
+      0.6017117011155924
+     ],
+     "tokens": 8149.7,
+     "tokens_ci": [
+      7559.775,
+      8655.375
+     ],
+     "tool_calls": 9.45
+    },
+    "single": {
+     "by_type": {
+      "breadth": {
+       "k": 5,
+       "n": 13,
+       "tokens": 9103.461538461539
+      },
+      "depth": {
+       "k": 13,
+       "n": 13,
+       "tokens": 4951.2307692307695
+      },
+      "mixed": {
+       "k": 2,
+       "n": 14,
+       "tokens": 8977.0
+      }
+     },
+     "critical_calls": 11.1,
+     "handoff_dropped": null,
+     "handoff_loss": null,
+     "handoff_runs": 0,
+     "hit_cap": 0,
+     "mast": {
+      "FC3": 20
+     },
+     "n": 40,
+     "success": 0.5,
+     "success_ci": [
+      0.35199278797099753,
+      0.6480072120290025
+     ],
+     "tokens": 7709.725,
+     "tokens_ci": [
+      6998.225,
+      8331.275
+     ],
+     "tool_calls": 10.1
+    }
+   },
+   "budget": {
+    "tokens": 10000,
+    "tool_calls": 20
+   },
+   "paired": {
+    "orchestrator": {
+     "n": 40,
+     "success_diff": -0.05,
+     "success_diff_ci": [
+      -0.125,
+      0.0
+     ],
+     "token_diff": -1100.65,
+     "token_diff_ci": [
+      -1532.5,
+      -660.075
+     ]
+    },
+    "pipeline": {
+     "n": 40,
+     "success_diff": 0.0,
+     "success_diff_ci": [
+      0.0,
+      0.0
+     ],
+     "token_diff": 507.875,
+     "token_diff_ci": [
+      312.675,
+      702.85
+     ]
+    },
+    "scratchpad": {
+     "n": 40,
+     "success_diff": -0.05,
+     "success_diff_ci": [
+      -0.125,
+      0.0
+     ],
+     "token_diff": 439.975,
+     "token_diff_ci": [
+      258.6,
+      603.2
+     ]
+    }
+   }
+  }
+ },
+ "meta": {
+  "bootstrap_seed": 0,
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.30GHz",
+  "date": "2026-11-23",
+  "model": "scripted-v1",
+  "n_tasks": 40,
+  "python": "3.11.18",
+  "seed": 7
+ },
+ "other_seeds": [
+  {
+   "levels": {
+    "loose": {
+     "orchestrator": {
+      "k": 40,
+      "n": 40
+     },
+     "pipeline": {
+      "k": 38,
+      "n": 40
+     },
+     "scratchpad": {
+      "k": 40,
+      "n": 40
+     },
+     "single": {
+      "k": 38,
+      "n": 40
+     }
+    },
+    "tight": {
+     "orchestrator": {
+      "k": 19,
+      "n": 40
+     },
+     "pipeline": {
+      "k": 22,
+      "n": 40
+     },
+     "scratchpad": {
+      "k": 20,
+      "n": 40
+     },
+     "single": {
+      "k": 22,
+      "n": 40
+     }
+    }
+   },
+   "seed": 11
+  }
+ ]
+}

@@ -12,7 +12,7 @@ import re
 from collections import Counter
 from pathlib import Path
 
-from . import metrics, runner
+from . import corpus, metrics, runner
 from . import tasks as T
 
 ROOT = T.ROOT
@@ -58,6 +58,7 @@ def summarize(runs: list[dict], meta: dict) -> dict:
                     t: {
                         "k": sum(r["correct"] for r in xs if r["type"] == t),
                         "n": sum(1 for r in xs if r["type"] == t),
+                        "tokens": _mean([r["tokens"] for r in xs if r["type"] == t]),
                     }
                     for t in TYPES
                 },
@@ -89,27 +90,42 @@ def summarize(runs: list[dict], meta: dict) -> dict:
     return out
 
 
+def _mean(xs):
+    return sum(xs) / len(xs) if xs else 0.0
+
+
 def guide(summary: dict) -> list[str]:
-    """Which design wins each task shape at each budget: most successes, then fewest tokens."""
+    """Which design to pick for each task shape at each budget.
+
+    Most tasks solved wins. A tie goes to the design that used fewer tokens on that
+    task shape. The single agent is the default, so a team design is named only when
+    it beats the single agent on success, or ties it and costs fewer tokens."""
     lines = []
     for level, lv in summary["levels"].items():
         for t in TYPES:
             rows = []
             for a, s in lv["archs"].items():
                 bt = s["by_type"][t]
-                rows.append((bt["k"] / bt["n"] if bt["n"] else 0, -s["tokens"], a))
+                rows.append((bt["k"] / bt["n"] if bt["n"] else 0, -bt["tokens"], a))
             best = max(rows)
             single = next(r for r in rows if r[2] == "single")
-            tied = [r[2] for r in rows if r[0] == best[0]]
-            note = (
-                "ties on success with " + ", ".join(LABEL[x].lower() for x in tied if x != best[2])
-                if len(tied) > 1
-                else "wins on success alone"
-            )
-            lines.append(
-                f"- **{t.capitalize()} tasks, {level} budget:** {LABEL[best[2]].lower()} "
-                f"({pct(best[0])} solved, against {pct(single[0])} for the single agent). It {note}."
-            )
+            head = f"- **{t.capitalize()} tasks, {level} budget:** "
+            if best[2] == "single":
+                lines.append(
+                    head + f"single agent ({pct(single[0])} solved). No team design solved more "
+                    "or matched it for fewer tokens."
+                )
+            elif best[0] > single[0]:
+                lines.append(
+                    head + f"{LABEL[best[2]].lower()} ({pct(best[0])} solved, against "
+                    f"{pct(single[0])} for the single agent)."
+                )
+            else:
+                saved = round(best[1] - single[1])
+                lines.append(
+                    head + f"{LABEL[best[2]].lower()}. It solved the same share as the single agent "
+                    f"({pct(best[0])}) with {saved:,} fewer tokens per task."
+                )
     return lines
 
 
@@ -191,22 +207,49 @@ def cost_table(summary: dict) -> str:
 
 def status_line(summary: dict, oracle: dict) -> str:
     m = summary["meta"]
+    tail = f" The oracle solves {oracle['correct']} of {oracle['n']} tasks.\n"
+    if m["model"].startswith("scripted"):
+        return (
+            f"**Status:** v0.1.0-rc1. All numbers below come from the scripted model `{m['model']}`, not from "
+            f"an LLM, run on {m['date']} with corpus seed {m['seed']} on the {m['n_tasks']} held-out tasks. "
+            "No free-model run happened yet, because the build machine had no provider key and its network "
+            "proxy refused the free providers." + tail
+        )
     return (
-        f"**Status:** v0.1.0-rc1. All numbers below come from the scripted model `{m['model']}`, not from an LLM, "
-        f"run on {m['date']} with corpus seed {m['seed']} on the {m['n_tasks']} held-out tasks. No free-model run "
-        f"happened yet, because this build machine had no provider key. The oracle solves "
-        f"{oracle['correct']} of {oracle['n']} tasks.\n"
+        f"**Status:** v0.1.0-rc1. All numbers below come from `{m['model']}`, recorded on {m['date']} with "
+        f"corpus seed {m['seed']} on {m['n_tasks']} held-out tasks, and replayed from the cache." + tail
     )
+
+
+def setup_block() -> str:
+    """Corpus, task and budget sizes, read from the frozen files and the runner."""
+    docs, tasks = T.load()
+    count = Counter(t["type"] for t in tasks)
+    split = Counter(t["split"] for t in tasks)
+    lines = [
+        f"- **Corpus:** {len(docs)} invented documents about {corpus.N_COMPANIES} invented companies, "
+        f"from seed {T.SEED}.",
+        f"- **Tasks:** {len(tasks)} with exact answers: {count['breadth']} breadth, {count['depth']} depth "
+        f"and {count['mixed']} mixed. {split['dev']} are for development and {split['heldout']} are held out.",
+    ]
+    for level, (tok, calls) in runner.BUDGETS.items():
+        lines.append(
+            f"- **{level.capitalize()} budget:** {tok:,} tokens and {calls} tool calls per task, "
+            "shared by every agent in the run."
+        )
+    return "\n".join(lines) + "\n"
 
 
 def blocks(summary: dict, oracle: dict) -> dict[str, str]:
     return {
+        "setup": setup_block(),
         "status": status_line(summary, oracle),
         "results": results_table(summary),
         "paired": paired_table(summary),
         "mast": mast_table(summary),
         "cost": cost_table(summary),
         "guide": "\n".join(guide(summary)) + "\n",
+        "seeds": seeds_table(summary),
     }
 
 
@@ -295,6 +338,13 @@ Each architecture runs the same tasks as the single agent, so each task gives on
 
 <!-- splitbench:guide -->
 <!-- /splitbench:guide -->
+
+## Second corpus seed
+
+The same study on a corpus and task set built from another seed, in memory. The frozen files stay as they are. Each cell counts solved held-out tasks.
+
+<!-- splitbench:seeds -->
+<!-- /splitbench:seeds -->
 """
 
 TARGETS = ["README.md", "docs/REPORT.md", "docs/INTERVIEW_QA.md"]
@@ -324,11 +374,50 @@ def render(model_name: str = "scripted-v1") -> dict[Path, str]:
     return out
 
 
+def other_seeds(model_name: str) -> list[dict]:
+    """Solved counts from held-out runs on corpora built from other seeds."""
+    out = []
+    for path in sorted((ROOT / "results").glob(f"runs-{runner.safe(model_name)}-heldout-seed*.jsonl")):
+        runs = runner.load_runs(path)
+        seed = int(path.stem.rsplit("seed", 1)[1])
+        levels = {}
+        for level in runner.BUDGETS:
+            levels[level] = {
+                a: {
+                    "k": sum(r["correct"] for r in runs if r["level"] == level and r["arch"] == a),
+                    "n": sum(1 for r in runs if r["level"] == level and r["arch"] == a),
+                }
+                for a in ARCHS
+            }
+        out.append({"seed": seed, "levels": levels})
+    return out
+
+
+def seeds_table(summary: dict) -> str:
+    seeds = summary.get("other_seeds") or []
+    if not seeds:
+        return "No run on another corpus seed yet.\n"
+    head = f"| Budget | Architecture | Seed {summary['meta']['seed']} |" + "".join(
+        f" Seed {x['seed']} |" for x in seeds
+    )
+    lines = [head, "| --- | --- | --- |" + " --- |" * len(seeds)]
+    for level, lv in summary["levels"].items():
+        for a, st in lv["archs"].items():
+            k = sum(b["k"] for b in st["by_type"].values())
+            row = f"| {level} | {LABEL[a]} | {k} of {st['n']} |"
+            for x in seeds:
+                c = x["levels"][level][a]
+                row += f" {c['k']} of {c['n']} |"
+            lines.append(row)
+    return "\n".join(lines) + "\n"
+
+
 def write_summary(model_name: str = "scripted-v1") -> Path:
     runs = runner.load_runs(runner.runs_path(model_name, "heldout"))
     meta_path = ROOT / "results" / f"meta-{model_name}-heldout.json"
     meta = json.loads(meta_path.read_text())
     s = summarize(runs, meta)
+    s["other_seeds"] = other_seeds(model_name)
     path = ROOT / "results" / f"summary-{model_name}-heldout.json"
     path.write_text(json.dumps(s, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     return path

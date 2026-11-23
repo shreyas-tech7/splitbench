@@ -96,14 +96,16 @@ def png(px) -> bytes:
 def main() -> None:
     px = canvas()
     rect(px, 0, 0, W, 12, ACCENT)
-    text(px, "deskbench", 80, 110, 14, FG)
-    text(px, "does your support agent follow", 84, 260, 5, ACCENT)
-    text(px, "the policy every time", 84, 320, 5, ACCENT)
-    text(px, "three small businesses, scored by", 84, 400, 4, MUTED)
-    text(px, "the database at the end of each chat", 84, 450, 4, MUTED)
-    # Four bars that shrink, a picture of pass at k falling as k grows. The shapes are fixed, not results.
-    for i, w in enumerate([300, 250, 200, 150]):
-        rect(px, 1200 - w, 500 + i * 20, 1200, 512 + i * 20, BARS[i % 3])
+    text(px, "splitbench", 80, 110, 14, FG)
+    text(px, "one agent or a team", 84, 260, 5, ACCENT)
+    text(px, "under the same budget", 84, 320, 5, ACCENT)
+    text(px, "four designs, exact answers,", 84, 400, 4, MUTED)
+    text(px, "and the facts lost in each handoff", 84, 450, 4, MUTED)
+    # One block beside a block split in three: a picture of the question. The shapes are fixed, not results.
+    rect(px, 900, 480, 980, 560, BARS[0])
+    rect(px, 1040, 480, 1200, 500, BARS[1])
+    rect(px, 1040, 510, 1200, 530, BARS[2])
+    rect(px, 1040, 540, 1200, 560, BARS[1])
     rect(px, 80, 590, 1200, 594, MUTED)
     out = Path(__file__).resolve().parents[1] / "docs" / "social-preview.png"
     out.write_bytes(png(px))
