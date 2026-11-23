@@ -161,6 +161,6 @@
       "grep -q v0.1.0-rc1 CHANGELOG.md",
       "test -f docs/handoff/COWORK_PROMPT.md"
     ],
-    "passes": false
+    "passes": true
   }
 ]

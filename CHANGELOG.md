@@ -2,7 +2,7 @@
 
 ## v0.1.0-rc1 (2026-11-23)
 
-Release commit: RELEASE_SHA
+Release commit: 51acbe0fc9c91bcaac662e9d28bbb11d0e9e69fa
 
 - A corpus generator with an answer key, and 60 frozen tasks in three shapes, split into dev and held out.
 - An oracle solver that answers every task with the tools and no model.

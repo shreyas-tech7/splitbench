@@ -1,6 +1,6 @@
 # Steps only Shreyas can do
 
-Release commit: RELEASE_SHA on branch `claude/project-thread-mok4pw`.
+Release commit: 51acbe0fc9c91bcaac662e9d28bbb11d0e9e69fa on branch `claude/project-thread-mok4pw`.
 
 Do them in this order.
 
@@ -8,7 +8,7 @@ Do them in this order.
 2. **Tag.** Create and push the tag on the release commit:
    ```bash
    git fetch origin
-   git tag -a v0.1.0-rc1 RELEASE_SHA -m "Release candidate 1"
+   git tag -a v0.1.0-rc1 51acbe0fc9c91bcaac662e9d28bbb11d0e9e69fa -m "Release candidate 1"
    git push origin v0.1.0-rc1
    ```
    Or create a pre-release with that tag on GitHub.
