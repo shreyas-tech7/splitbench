@@ -39,5 +39,4 @@ A fresh subagent cloned the repo into a clean folder, ran `./init.sh` and checke
 Its minor notes, and what I did:
 
 - Half values rounded two ways because of float rounding. The report now rounds halves up with `report.one`.
-- The badge and the clone command work for others only once the repo is public. That is in `docs/HUMAN_STEPS.md`.
-- The Cowork prompt now tells Cowork not to ask questions and not to stop without a result.
+- The badge and the clone command now work for others, because the repo is public.
