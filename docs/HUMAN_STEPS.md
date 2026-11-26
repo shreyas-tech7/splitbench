@@ -28,7 +28,7 @@ Do them in this order.
    ```
    Check the provider's free limits page first. The runner resumes, so a run that hits a daily limit can continue the next day. Commit `results/cache/` so anyone can replay it.
 8. **Decide on the build prompt.** Decide whether `docs/build/BUILD_PROMPT.md` stays public.
-9. **Make the repo public.** All history becomes public at that moment.
+9. **Make the repo public.** Done 2026-11-26: the repo is public.
 10. **Pages.** Turn on Pages from the `docs/` folder of `main`, so `docs/index.html` has an address.
 11. **Pin.** Pin the repo or list it in the profile README.
 12. **PyPI.** Publish `splitbench` with trusted publishing, if you want the package on PyPI. The name was free on 2026-11-23.

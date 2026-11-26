@@ -156,10 +156,10 @@
   {
     "id": "F17",
     "area": "handoff",
-    "description": "Release candidate entry with the full release SHA in CHANGELOG and HUMAN_STEPS, COWORK_PROMPT, GITHUB_ABOUT and topics",
+    "description": "Release candidate entry with the full release SHA in CHANGELOG and HUMAN_STEPS, GITHUB_ABOUT and topics",
     "steps": [
       "grep -q v0.1.0-rc1 CHANGELOG.md",
-      "test -f docs/handoff/COWORK_PROMPT.md"
+      "test -f docs/HUMAN_STEPS.md"
     ],
     "passes": true
   }
